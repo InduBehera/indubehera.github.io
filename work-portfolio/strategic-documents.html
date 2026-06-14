@@ -7,214 +7,411 @@
   <meta name="description" content="Strategic work portfolio by Indu Behera covering GTM thinking, market narratives, ICP frameworks, positioning, launch planning, AI use-case strategy, and commercial intelligence.">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      color: #222;
-      background: #fafafa;
+      color: #1f2933;
+      background: #f6f3ef;
     }
 
-    header {
-      padding: 48px 8%;
-      background: #ffffff;
-      border-bottom: 1px solid #e5e5e5;
+    a {
+      color: inherit;
     }
 
-    header a {
-      color: #555;
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 32px;
+      color: #6b5f57;
       text-decoration: none;
       font-size: 14px;
     }
 
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f4ebe3 100%);
+      border: 1px solid #eadfd6;
+      border-radius: 28px;
+      padding: 56px;
+      margin-bottom: 36px;
+      box-shadow: 0 18px 45px rgba(72, 55, 39, 0.08);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 700;
+      color: #9a6b45;
+      margin-bottom: 14px;
+    }
+
     h1 {
-      margin-top: 24px;
-      font-size: 42px;
-      line-height: 1.2;
+      margin: 0;
+      max-width: 860px;
+      font-size: 52px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #1f2933;
     }
 
     .intro {
-      max-width: 800px;
-      font-size: 18px;
-      color: #555;
+      max-width: 780px;
+      margin-top: 24px;
+      font-size: 19px;
+      color: #5b6470;
     }
 
-    main {
-      padding: 48px 8%;
+    .summary-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .summary-item {
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid #eadfd6;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .summary-item strong {
+      display: block;
+      font-size: 22px;
+      color: #1f2933;
+    }
+
+    .summary-item span {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+      color: #6b7280;
     }
 
     .section-intro {
       max-width: 850px;
-      margin-bottom: 40px;
+      margin: 0 0 34px;
+      padding: 0 4px;
     }
 
     .section-intro h2,
-    section h2 {
-      font-size: 28px;
-      margin-bottom: 12px;
+    .samples-header h2 {
+      font-size: 30px;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      color: #1f2933;
+    }
+
+    .section-intro p,
+    .samples-header p {
+      color: #5b6470;
+      font-size: 17px;
+    }
+
+    .samples-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-end;
+      margin-top: 44px;
+      margin-bottom: 24px;
+      padding: 0 4px;
+    }
+
+    .samples-header p {
+      max-width: 620px;
+      margin: 0;
     }
 
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
     .portfolio-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 420px;
       background: #ffffff;
-      border: 1px solid #e5e5e5;
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      border: 1px solid #eadfd6;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 16px 35px rgba(72, 55, 39, 0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .portfolio-card h3 {
-      margin-top: 0;
-      font-size: 22px;
-      line-height: 1.3;
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 45px rgba(72, 55, 39, 0.12);
     }
 
-    .portfolio-card p {
-      color: #555;
+    .card-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1f2933;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
     }
 
     .tag {
       display: inline-block;
-      margin-bottom: 12px;
-      font-size: 13px;
-      color: #666;
-      background: #f1f1f1;
-      padding: 6px 10px;
+      align-self: flex-start;
+      margin-bottom: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #8a5a35;
+      background: #f6ede5;
+      padding: 7px 11px;
       border-radius: 999px;
+    }
+
+    .portfolio-card h3 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #1f2933;
+    }
+
+    .portfolio-card p {
+      color: #5b6470;
+      font-size: 15.5px;
+      margin: 0 0 14px;
+    }
+
+    .focus {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid #eee4dc;
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .focus strong {
+      color: #1f2933;
     }
 
     .button {
       display: inline-block;
-      margin-top: 12px;
-      padding: 10px 16px;
-      border-radius: 8px;
-      background: #111;
+      margin-top: 18px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: #1f2933;
       color: #ffffff;
       text-decoration: none;
       font-size: 14px;
+      font-weight: 700;
+      text-align: center;
     }
 
     .button:hover {
-      background: #333;
+      background: #3a4654;
     }
 
     footer {
-      padding: 32px 8%;
-      border-top: 1px solid #e5e5e5;
-      background: #ffffff;
-      color: #666;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #eadfd6;
+      color: #7b7169;
       font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding: 36px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .summary-strip,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .samples-header {
+        display: block;
+      }
+
+      .portfolio-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding: 20px 16px 40px;
+      }
+
+      .hero {
+        padding: 28px;
+        border-radius: 22px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <a href="../index.html">← Back to Home</a>
-    <h1>Strategic Work Portfolio</h1>
-    <p class="intro">
-      A curated selection of strategic thinking across GTM planning, market narratives,
-      ICP frameworks, positioning, launch strategy, AI use-case development,
-      and commercial intelligence.
-    </p>
-  </header>
+  <div class="page">
 
-  <main>
+    <a class="back-link" href="../index.html">← Back to Home</a>
 
-    <section class="section-intro">
-      <h2>Overview</h2>
-      <p>
-        This portfolio section highlights strategy-led work samples that demonstrate
-        how I structure ambiguous business challenges, translate market signals into
-        actionable narratives, and build practical frameworks that support commercial,
-        marketing, and AI-enabled growth decisions.
+    <header class="hero">
+      <div class="eyebrow">Strategic Work Portfolio</div>
+      <h1>Strategy-led work across positioning, GTM, AI use cases, and commercial intelligence.</h1>
+      <p class="intro">
+        A curated selection of strategic thinking across GTM planning, market narratives,
+        ICP frameworks, positioning, launch strategy, AI use-case development,
+        and decision intelligence for pharma, life sciences, and B2B growth contexts.
       </p>
-    </section>
 
-    <section>
-      <h2>Featured Work Samples</h2>
-
-      <div class="portfolio-grid">
-
-        <article class="portfolio-card">
-          <span class="tag">Strategic Document / Corporate Repositioning</span>
-          <h3>Corporate Repositioning Proposal: Decision Intelligence</h3>
-          <p>
-            A strategic repositioning proposal outlining the shift from a traditional
-            BI/dashboard vendor to a pharma-native Decision Intelligence partner.
-          </p>
-          <p>
-            The work reframes the company narrative around the idea:
-            <strong>“The data exists. The decision doesn't.”</strong>
-          </p>
-          <p>
-            <strong>Focus:</strong> corporate positioning, market narrative, pharma GTM,
-            competitive differentiation, decision intelligence.
-          </p>
-          <a class="button" href="https://drive.google.com/file/d/1HdWpAsDunwP5oi7cLRajES9xJRouCuPO/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-            View work sample
-          </a>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="tag">PDF Document / Capabilities & Service Overview</span>
-          <h3>Lifescience Service Stack</h3>
-          <p>
-            A capabilities and service overview outlining Phamax’s core capabilities
-            and AI-enabled decision intelligence services for Life Sciences and
-            Healthcare teams.
-          </p>
-          <p>
-            The document presents six operational pillars, including Market &
-            Competitive Intelligence, Advanced Commercial Analytics, and Market
-            Access Intelligence.
-          </p>
-          <p>
-            <strong>Focus:</strong> life sciences strategy, service portfolio design,
-            decision intelligence, commercial analytics, market access intelligence.
-          </p>
-          <a class="button" href="https://drive.google.com/file/d/1rngCwBvj5Jb5vF0rYCMjZixeS53M3lS4/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-            View work sample
-          </a>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="tag">PDF Document / Account-Based Marketing Playbook</span>
-          <h3>Medical Affairs Prospecting Framework</h3>
-          <p>
-            An ICP-led prospecting and marketing playbook for MYAIA within the
-            pharmaceutical sector.
-          </p>
-          <p>
-            The framework defines a structured scoring model for account prioritization,
-            maps the buying committee across Medical Affairs roles such as MedInfo,
-            MSL, and Drug Safety, and translates these insights into targeted value
-            propositions.
-          </p>
-          <p>
-            <strong>Focus:</strong> ICP strategy, account-based marketing, pharma
-            prospecting, buying committee mapping, AI assistant positioning.
-          </p>
-          <a class="button" href="https://drive.google.com/file/d/1lWkYWNMDb1D4e7aIZyKBmi8tlCW-pWR7/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-            View work sample
-          </a>
-        </article>
-
+      <div class="summary-strip">
+        <div class="summary-item">
+          <strong>03</strong>
+          <span>Featured strategic documents</span>
+        </div>
+        <div class="summary-item">
+          <strong>AI + Pharma</strong>
+          <span>Core portfolio theme</span>
+        </div>
+        <div class="summary-item">
+          <strong>GTM</strong>
+          <span>Positioning, ICP, and commercial strategy</span>
+        </div>
       </div>
-    </section>
+    </header>
 
-  </main>
+    <main>
 
-  <footer>
-    <p>© Indu Behera · Strategic Work Portfolio</p>
-  </footer>
+      <section class="section-intro">
+        <h2>Overview</h2>
+        <p>
+          This section highlights strategy-led work samples that show how I structure
+          ambiguous business challenges, translate market signals into actionable narratives,
+          and build practical frameworks that support commercial, marketing, and AI-enabled
+          growth decisions.
+        </p>
+      </section>
+
+      <section>
+        <div class="samples-header">
+          <div>
+            <h2>Featured Work Samples</h2>
+          </div>
+          <p>
+            Each sample is selected to demonstrate a different layer of strategic work:
+            company repositioning, life-science service design, and account-based
+            prospecting for AI-enabled pharma workflows.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-card">
+            <div class="card-number">01</div>
+            <span class="tag">Corporate Repositioning</span>
+            <h3>Corporate Repositioning Proposal: Decision Intelligence</h3>
+            <p>
+              A strategic repositioning proposal outlining the shift from a traditional
+              BI/dashboard vendor to a pharma-native Decision Intelligence partner.
+            </p>
+            <p>
+              The work reframes the company narrative around the idea:
+              <strong>“The data exists. The decision doesn't.”</strong>
+            </p>
+            <div class="focus">
+              <strong>Focus:</strong> corporate positioning, market narrative, pharma GTM,
+              competitive differentiation, decision intelligence.
+            </div>
+            <a class="button" href="https://drive.google.com/file/d/1HdWpAsDunwP5oi7cLRajES9xJRouCuPO/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              View work sample
+            </a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="card-number">02</div>
+            <span class="tag">Capabilities & Service Overview</span>
+            <h3>Lifescience Service Stack</h3>
+            <p>
+              A capabilities and service overview outlining Phamax’s core capabilities
+              and AI-enabled decision intelligence services for Life Sciences and
+              Healthcare teams.
+            </p>
+            <p>
+              The document presents six operational pillars, including Market &
+              Competitive Intelligence, Advanced Commercial Analytics, and Market
+              Access Intelligence.
+            </p>
+            <div class="focus">
+              <strong>Focus:</strong> life sciences strategy, service portfolio design,
+              decision intelligence, commercial analytics, market access intelligence.
+            </div>
+            <a class="button" href="https://drive.google.com/file/d/1rngCwBvj5Jb5vF0rYCMjZixeS53M3lS4/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              View work sample
+            </a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="card-number">03</div>
+            <span class="tag">ABM / ICP Playbook</span>
+            <h3>Medical Affairs Prospecting Framework</h3>
+            <p>
+              An ICP-led prospecting and marketing playbook for MYAIA within the
+              pharmaceutical sector.
+            </p>
+            <p>
+              The framework defines a structured scoring model for account prioritization,
+              maps the buying committee across Medical Affairs roles such as MedInfo,
+              MSL, and Drug Safety, and translates these insights into targeted value
+              propositions.
+            </p>
+            <div class="focus">
+              <strong>Focus:</strong> ICP strategy, account-based marketing, pharma
+              prospecting, buying committee mapping, AI assistant positioning.
+            </div>
+            <a class="button" href="https://drive.google.com/file/d/1lWkYWNMDb1D4e7aIZyKBmi8tlCW-pWR7/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              View work sample
+            </a>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© Indu Behera · Strategic Work Portfolio</p>
+    </footer>
+
+  </div>
 
 </body>
 </html>
