@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentations Portfolio | Indu Behera</title>
+  <meta name="description" content="Presentation portfolio by Indu Behera featuring strategy decks, GTM narratives, AI use-case presentations, and commercial storytelling work.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2933;
+      background: #f6f3ef;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 32px;
+      color: #6b5f57;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f4ebe3 100%);
+      border: 1px solid #eadfd6;
+      border-radius: 28px;
+      padding: 56px;
+      margin-bottom: 36px;
+      box-shadow: 0 18px 45px rgba(72, 55, 39, 0.08);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 700;
+      color: #9a6b45;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 860px;
+      font-size: 52px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #1f2933;
+    }
+
+    .intro {
+      max-width: 780px;
+      margin-top: 24px;
+      font-size: 19px;
+      color: #5b6470;
+    }
+
+    .summary-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .summary-item {
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid #eadfd6;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .summary-item strong {
+      display: block;
+      font-size: 22px;
+      color: #1f2933;
+    }
+
+    .summary-item span {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .section-intro {
+      max-width: 850px;
+      margin: 0 0 34px;
+      padding: 0 4px;
+    }
+
+    .section-intro h2,
+    .samples-header h2 {
+      font-size: 30px;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      color: #1f2933;
+    }
+
+    .section-intro p,
+    .samples-header p {
+      color: #5b6470;
+      font-size: 17px;
+    }
+
+    .samples-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-end;
+      margin-top: 44px;
+      margin-bottom: 24px;
+      padding: 0 4px;
+    }
+
+    .samples-header p {
+      max-width: 620px;
+      margin: 0;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .portfolio-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 420px;
+      background: #ffffff;
+      border: 1px solid #eadfd6;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 16px 35px rgba(72, 55, 39, 0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 45px rgba(72, 55, 39, 0.12);
+    }
+
+    .card-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1f2933;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #8a5a35;
+      background: #f6ede5;
+      padding: 7px 11px;
+      border-radius: 999px;
+    }
+
+    .portfolio-card h3 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #1f2933;
+    }
+
+    .portfolio-card p {
+      color: #5b6470;
+      font-size: 15.5px;
+      margin: 0 0 14px;
+    }
+
+    .focus {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid #eee4dc;
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .focus strong {
+      color: #1f2933;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: #1f2933;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .button:hover {
+      background: #3a4654;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #eadfd6;
+      color: #7b7169;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding: 36px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .summary-strip,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .samples-header {
+        display: block;
+      }
+
+      .portfolio-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding: 20px 16px 40px;
+      }
+
+      .hero {
+        padding: 28px;
+        border-radius: 22px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <a class="back-link" href="../index.html">← Back to Home</a>
+
+    <header class="hero">
+      <div class="eyebrow">Presentations Portfolio</div>
+      <h1>Presentation-led storytelling across strategy, GTM, AI, and commercial transformation.</h1>
+      <p class="intro">
+        A curated collection of presentation work that demonstrates strategic storytelling,
+        executive communication, GTM narrative development, AI use-case framing, and
+        commercial value articulation.
+      </p>
+
+      <div class="summary-strip">
+        <div class="summary-item">
+          <strong>03</strong>
+          <span>Featured presentations</span>
+        </div>
+        <div class="summary-item">
+          <strong>Strategy</strong>
+          <span>Executive and commercial narratives</span>
+        </div>
+        <div class="summary-item">
+          <strong>AI + GTM</strong>
+          <span>Use-case framing and market storytelling</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="section-intro">
+        <h2>Overview</h2>
+        <p>
+          This section highlights selected presentation samples that show how complex
+          strategy, market, and AI-led ideas can be structured into clear narratives
+          for business, commercial, and stakeholder decision-making.
+        </p>
+      </section>
+
+      <section>
+        <div class="samples-header">
+          <div>
+            <h2>Featured Presentations</h2>
+          </div>
+          <p>
+            Presentation samples will be added here as curated cards with short context,
+            focus areas, and links to view the work.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <!-- Presentation cards will go here -->
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© Indu Behera · Presentations Portfolio</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
