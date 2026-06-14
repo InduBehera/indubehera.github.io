@@ -1,1 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investor Work | Indu Behera</title>
+  <meta name="description" content="Investor-facing work by Indu Behera covering fundraising narratives, market opportunity, market readiness, investor teasers, business model storytelling, and growth strategy.">
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2933;
+      background: #f6f3ef;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 32px;
+      color: #6b5f57;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f4ebe3 100%);
+      border: 1px solid #eadfd6;
+      border-radius: 28px;
+      padding: 56px;
+      margin-bottom: 36px;
+      box-shadow: 0 18px 45px rgba(72, 55, 39, 0.08);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 700;
+      color: #9a6b45;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-size: 52px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #1f2933;
+    }
+
+    .intro {
+      max-width: 780px;
+      margin-top: 24px;
+      font-size: 19px;
+      color: #5b6470;
+    }
+
+    .summary-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .summary-item {
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid #eadfd6;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .summary-item strong {
+      display: block;
+      font-size: 22px;
+      color: #1f2933;
+    }
+
+    .summary-item span {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .section-intro {
+      max-width: 850px;
+      margin: 0 0 34px;
+      padding: 0 4px;
+    }
+
+    .section-intro h2,
+    .samples-header h2 {
+      font-size: 30px;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      color: #1f2933;
+    }
+
+    .section-intro p,
+    .samples-header p {
+      color: #5b6470;
+      font-size: 17px;
+    }
+
+    .samples-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-end;
+      margin-top: 44px;
+      margin-bottom: 24px;
+      padding: 0 4px;
+    }
+
+    .samples-header p {
+      max-width: 620px;
+      margin: 0;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .portfolio-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 475px;
+      background: #ffffff;
+      border: 1px solid #eadfd6;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 16px 35px rgba(72, 55, 39, 0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 45px rgba(72, 55, 39, 0.12);
+    }
+
+    .card-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1f2933;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #8a5a35;
+      background: #f6ede5;
+      padding: 7px 11px;
+      border-radius: 999px;
+    }
+
+    .portfolio-card h3 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #1f2933;
+    }
+
+    .portfolio-card p {
+      color: #5b6470;
+      font-size: 15.5px;
+      margin: 0 0 14px;
+    }
+
+    .focus {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid #eee4dc;
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .focus strong {
+      color: #1f2933;
+    }
+
+    .confidentiality {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #7b7169;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: #1f2933;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .button:hover {
+      background: #3a4654;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #eadfd6;
+      color: #7b7169;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding: 36px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .summary-strip,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .samples-header {
+        display: block;
+      }
+
+      .portfolio-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding: 20px 16px 40px;
+      }
+
+      .hero {
+        padding: 28px;
+        border-radius: 22px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <a class="back-link" href="../index.html">← Back to Home</a>
+
+    <header class="hero">
+      <div class="eyebrow">Investor Work</div>
+      <h1>Investor-facing narratives across market opportunity, business strategy, and growth storytelling.</h1>
+      <p class="intro">
+        A curated selection of investor-oriented work showing how market insight,
+        business opportunity, product positioning, growth strategy, and commercial
+        potential can be translated into clear, compelling narratives.
+      </p>
+
+      <div class="summary-strip">
+        <div class="summary-item">
+          <strong>03</strong>
+          <span>Featured investor-facing samples</span>
+        </div>
+        <div class="summary-item">
+          <strong>Market</strong>
+          <span>Readiness, opportunity, and consumer insight</span>
+        </div>
+        <div class="summary-item">
+          <strong>Growth</strong>
+          <span>Pitch, investment, and commercial strategy</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="section-intro">
+        <h2>Overview</h2>
+        <p>
+          This section highlights work samples that connect research, market opportunity,
+          investor storytelling, product-market fit, and growth strategy. The materials
+          demonstrate how complex business ideas can be framed for decision-makers,
+          stakeholders, and investor audiences.
+        </p>
+      </section>
+
+      <section>
+        <div class="samples-header">
+          <div>
+            <h2>Featured Investor Work</h2>
+          </div>
+          <p>
+            Each sample reflects a different layer of investor-facing thinking:
+            market readiness research, consumer product pitch strategy, and AI healthcare
+            investment storytelling.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-card">
+            <div class="card-number">01</div>
+            <span class="tag">Market Readiness Study</span>
+            <h3>Understanding Gen Z's Awareness, Attitudes, Behavior Towards Millets, and Market Readiness</h3>
+            <p>
+              A 39-page research project report exploring Gen Z consumption habits,
+              attitudes, and market gaps regarding millets.
+            </p>
+            <p>
+              The report offers strategic commercial recommendations to support adoption
+              of millets as a highly nutritious and climate-resilient crop.
+            </p>
+            <div class="focus">
+              <strong>Focus:</strong> Gen Z consumer insights, nutritional benefits,
+              market readiness, industry trends, and targeted marketing frameworks.
+            </div>
+            <div class="confidentiality">
+              Research project report / public-safe version.
+            </div>
+            <a class="button" href="https://drive.google.com/file/d/1Ud5aQJDA3eVmF93VmMNOKoMc3GjzRxLZ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              View work sample
+            </a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="card-number">02</div>
+            <span class="tag">Investor Pitch Deck</span>
+            <h3>Sneakers for Women on the MOVE – Pitch Presentation</h3>
+            <p>
+              An 18-page investment pitch deck outlining a business opportunity for a
+              premium, comfortable, and stylish women's sneaker brand designed for Indian
+              women on the move.
+            </p>
+            <p>
+              The pitch addresses comfort, health, and design gaps in the domestic
+              footwear market.
+            </p>
+            <div class="focus">
+              <strong>Focus:</strong> footwear market pain points, product-market fit,
+              design innovation, market size analysis, and growth strategy.
+            </div>
+            <div class="confidentiality">
+              Blinded / founder name anonymized for initial investor review.
+            </div>
+            <a class="button" href="https://drive.google.com/file/d/1Ip_QdQgoYa71t_187nPmr7ml809fXaDp/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              View work sample
+            </a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="card-number">03</div>
+            <span class="tag">Investor Teaser</span>
+            <h3>The AI-powered Healthcare Digital Assistant</h3>
+            <p>
+              A single-page digital investor teaser for an AI-powered, domain-trained
+              healthcare digital assistant.
+            </p>
+            <p>
+              The infographic highlights industry challenges, value propositions,
+              commercial models, growth roadmap, and a CHF 3.5 million investment ask.
+            </p>
+            <div class="focus">
+              <strong>Focus:</strong> healthcare AI compliance, SaaS pricing model,
+              domain expertise, operational roadmap, and investor ask.
+            </div>
+            <div class="confidentiality">
+              Investor pitch materials / proprietary commercial strategy.
+            </div>
+            <a class="button" href="https://drive.google.com/file/d/1IlD0V7HwbIp0U3ECEDprGqwyuT7lx1sy/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              View work sample
+            </a>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© Indu Behera · Investor Work</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
