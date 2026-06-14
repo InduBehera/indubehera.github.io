@@ -249,7 +249,9 @@ h1.hero-name .last{color:var(--verm)}
 .build-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
 @media(max-width:800px){.build-intro{grid-template-columns:1fr;gap:1.5rem}}
 .build-note{font-size:.88rem;color:var(--muted);line-height:1.85;font-style:italic;border-left:2px solid var(--border-warm);padding-left:1rem;font-family:var(--font-body)}
-.build-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1px;background:var(--border-warm);border:1px solid var(--border-warm);border-radius:4px;overflow:hidden}
+.build-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-warm);border:1px solid var(--border-warm);border-radius:4px;overflow:hidden}
+@media(max-width:900px){.build-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.build-grid{grid-template-columns:1fr}}
 .bc{background:var(--parch-warm);padding:1.65rem;transition:background .25s}
 .bc:hover{background:var(--parch)}
 .bc-tag{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--verm);margin-bottom:.6rem;font-family:var(--font-body)}
@@ -1111,6 +1113,151 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
   margin:-.5rem 0 1rem;letter-spacing:.01em;
 }
 
+
+/* ── ABOUT SECOND PULL QUOTE ── */
+.about-pq2{
+  margin-top:2rem;padding:1.25rem 1.5rem;
+  background:rgba(181,71,42,.05);
+  border-left:3px solid var(--verm);
+  border-radius:0 4px 4px 0;
+}
+.about-pq2 p{
+  font-family:var(--font-display);font-style:italic;
+  font-size:clamp(.95rem,1.5vw,1.05rem);
+  line-height:1.55;color:var(--ink);
+  font-weight:500;
+}
+
+
+/* ── TRACK RECORD SECTION SUBHEAD ── */
+.track-record-sub{
+  font-family:var(--font-display);font-style:italic;
+  font-size:clamp(1rem,1.6vw,1.15rem);
+  color:var(--ochre);font-weight:600;
+  margin:-.5rem 0 1rem;letter-spacing:.01em;
+}
+.brand-grid-sub{
+  font-size:.85rem;color:var(--muted);
+  font-style:italic;margin:-.85rem 0 1.5rem;
+  font-family:var(--font-body);
+}
+
+
+/* ── TOOLS COMPRESSED STRIP ── */
+.tools-strip{
+  background:var(--parch);
+  border:1px solid var(--border-warm);
+  border-radius:6px;padding:2rem 2rem 1.75rem;
+  margin-top:2.5rem;
+}
+.tools-chip-row{
+  display:flex;flex-wrap:wrap;gap:.5rem;
+  justify-content:center;margin-bottom:1.5rem;
+}
+.t-chip{
+  font-size:.78rem;font-family:var(--font-body);font-weight:500;
+  padding:.4rem .85rem;border-radius:3px;
+  border:1px solid;background:#fff;
+  transition:all .25s;cursor:default;
+}
+.t-chip.ai{color:var(--verm);border-color:rgba(181,71,42,.25);background:rgba(181,71,42,.05)}
+.t-chip.ai:hover{background:var(--verm);color:#fff;border-color:var(--verm)}
+.t-chip.crm{color:var(--ochre);border-color:rgba(139,105,20,.3);background:rgba(139,105,20,.05)}
+.t-chip.crm:hover{background:var(--ochre);color:#fff;border-color:var(--ochre)}
+.t-chip.dg{color:var(--ink);border-color:rgba(26,26,46,.22);background:rgba(26,26,46,.04)}
+.t-chip.dg:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.t-chip.seo{color:var(--ochre);border-color:rgba(139,105,20,.3);background:#fff}
+.t-chip.seo:hover{background:var(--ochre);color:#fff;border-color:var(--ochre)}
+.t-chip.cd{color:var(--muted);border-color:var(--border-warm);background:#fff}
+.t-chip.cd:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.tools-legend{
+  display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;
+  padding-top:1.25rem;border-top:1px dashed var(--border-warm);
+}
+.legend-item{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.7rem;color:var(--muted);
+  letter-spacing:.04em;font-family:var(--font-body);
+}
+.legend-dot{
+  width:8px;height:8px;border-radius:50%;
+  flex-shrink:0;display:inline-block;
+}
+.legend-dot.ai{background:var(--verm)}
+.legend-dot.crm{background:var(--ochre)}
+.legend-dot.dg{background:var(--ink)}
+.legend-dot.seo{background:var(--ochre);opacity:.6}
+.legend-dot.cd{background:var(--muted)}
+
+
+/* ── COMMUNITIES & INFLUENCE ── */
+.comm-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;
+  margin-top:2rem;max-width:880px;
+}
+@media(max-width:760px){.comm-grid{grid-template-columns:1fr;max-width:none}}
+
+.comm-card{
+  display:block;background:var(--parch);
+  border:1px solid var(--ochre-border);
+  border-radius:8px;overflow:hidden;
+  text-decoration:none;color:inherit;
+  transition:all .3s cubic-bezier(.2,.8,.2,1);
+}
+.comm-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 14px 32px rgba(139,105,20,.18);
+  border-color:var(--ochre);
+}
+
+.comm-img{
+  width:100%;aspect-ratio:16/9;
+  overflow:hidden;background:var(--parch-warm);
+  position:relative;
+}
+.comm-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 65%,rgba(26,26,46,.08));
+  pointer-events:none;
+}
+.comm-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s ease;
+}
+.comm-card:hover .comm-img img{transform:scale(1.05)}
+
+.comm-body{padding:1.35rem 1.5rem 1.5rem}
+.comm-role{
+  display:inline-block;font-size:.65rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:.25rem .65rem;border-radius:3px;
+  margin-bottom:.85rem;font-family:var(--font-body);
+}
+.comm-role.founder{background:var(--verm);color:#fff}
+.comm-role.member{background:rgba(139,105,20,.15);color:var(--ochre)}
+
+.comm-body h3{
+  font-family:var(--font-display);font-size:1.25rem;font-weight:700;
+  color:var(--ink);margin-bottom:.3rem;line-height:1.25;
+}
+.comm-sub{
+  font-size:.78rem;color:var(--ochre);font-style:italic;
+  font-family:var(--font-body);margin-bottom:.85rem;
+}
+.comm-desc{
+  font-size:.84rem;color:var(--muted);line-height:1.65;
+  margin-bottom:1rem;font-family:var(--font-body);
+}
+.comm-cta{
+  font-size:.7rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--verm);
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--font-body);
+}
+.comm-arrow{transition:transform .25s}
+.comm-card:hover .comm-arrow{transform:translate(2px,-2px)}
+
 </style>
 
 <script type="application/ld+json">
@@ -1195,7 +1342,7 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
       <div class="quick-creds">
         <div class="qc"><div class="qc-dot"></div><div><p>phamax Group / Ariya.ai</p><p>Founding Team · Head of Marketing · 2019–Present</p></div></div>
         <div class="qc"><div class="qc-dot"></div><div><p>IIM Lucknow — CMO Programme</p><p>MBA · KIIT · B.Pharm · BPUT</p></div></div>
-        <div class="qc"><div class="qc-dot"></div><div><p>Bengaluru, India · Open to Global</p><p>EMEA · EU · Asia Pacific</p></div></div>
+        <div class="qc"><div class="qc-dot"></div><div><p>Bengaluru, India</p><p>Work Exposure to Markets — EMEA · EU · US (Partially) · Asia Pacific</p></div></div>
       </div>
     </div>
   </div>
@@ -1217,8 +1364,13 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
     <div class="about-grid">
       <div>
         <div class="about-body reveal">
-          <p>I joined phamax as a <strong>founding member of Ariya</strong> — from earliest concept to the platform it is today. I identified the commercial and medical AI opportunity before the market caught up, built the entire GTM motion from scratch, and translate ambiguous business requirements into <strong>PRDs</strong> — tech-ready narratives that bridge commercial leaders and engineering teams.</p>
-          <p>15+ years across industrial B2B sales, premium automotive, pharma consulting, and AI-powered SaaS. Every sector sharpened a different instinct. I think strategically, write clearly, and connect every marketing motion back to pipeline and revenue.</p>
+          <p>My journey has moved from science to sales, from brand building to pharma consulting, and finally to building AI solutions for life sciences. With a B.Pharm foundation and 15+ years across industrial B2B, premium automotive, pharma consulting, and AI-powered SaaS, I bring a rare combination of commercial instinct, brand discipline, domain fluency, and product-to-market execution.</p>
+          <p>At phamax, I was part of the founding team behind Ariya — helping shape the platform from early concept to market-ready AI solution. I identified commercial and medical AI opportunities before the market fully matured, translated business needs into PRDs and product workflows, and built GTM narratives that connected product, sales, marketing, and customer adoption.</p>
+        </div>
+
+        <!-- SECOND PULL-QUOTE -->
+        <div class="about-pq2 reveal">
+          <p>I work best where ambiguity is high — turning complex AI capabilities into clear market narratives, sales enablement systems, and growth motions teams can execute.</p>
         </div>
 
         <!-- EDUCATION CREDENTIALS BLOCK -->
@@ -1286,13 +1438,13 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
             </div>
           </div>
 
-          <!-- 3 SMALLER CARDS -->
+          <!-- 4 SUPPORTING CARDS - 2x2 GRID -->
           <div class="cred-c reveal rd1">
             <div class="cred-c-icon">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l9 4v7c0 5-4 8-9 9-5-1-9-4-9-9V6l9-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h3>Strategic Leader</h3>
-            <p>GTM strategy, brand positioning, product marketing, demand generation, business storytelling.</p>
+            <h3>Strategic Growth Leader</h3>
+            <p>GTM strategy, product positioning, launch planning, stakeholder alignment, and business narrative for complex AI/pharma solutions.</p>
           </div>
 
           <div class="cred-c reveal rd2">
@@ -1300,15 +1452,23 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
               <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l5-5 4 4 8-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Commercial Operator</h3>
-            <p>Pipeline contribution, MQL-to-SQL conversion, EMEA revenue growth.</p>
+            <p>Pipeline contribution, MQL-to-SQL conversion, sales enablement, CRM workflows, and EMEA revenue growth.</p>
           </div>
 
           <div class="cred-c reveal rd3">
             <div class="cred-c-icon">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h7M13 12h7M11 8v8M13 8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="6" cy="6" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
             </div>
-            <h3>Pharma/SaaS Translator</h3>
-            <p>Complex AI capabilities → narratives medical and commercial leaders trust.</p>
+            <h3>Pharma-AI Translator</h3>
+            <p>Turns medical, commercial, and technical complexity into practical workflows, buyer narratives, and decision intelligence.</p>
+          </div>
+
+          <div class="cred-c reveal rd1">
+            <div class="cred-c-icon">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="6" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="6" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="18" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="18" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3" stroke="currentColor" stroke-width="1.4"/></svg>
+            </div>
+            <h3>Cross-Functional Builder</h3>
+            <p>Aligns product, marketing, sales, medical, client success, and leadership teams around shared GTM execution.</p>
           </div>
 
         </div>
@@ -1419,226 +1579,6 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
   </div>
 </section>
 
-<!-- BEFORE AI -->
-<section id="before-ai" class="before-ai-bg">
-  <div class="container">
-    <div class="eyebrow reveal">The First Decade</div>
-    <div class="rule"></div>
-    <h2 class="section-h2 reveal">Before AI, I built brands.</h2>
-    <p class="lead reveal">Eight years across premium automotive, B2B industrial, and pharma consulting — building brands, launching products, running marquee events, and managing teams before any of this was called AI marketing.</p>
-
-    <!-- LEADERSHIP FOOTPRINT STRIP -->
-    <div class="leadership-strip reveal">
-      <div class="ls-item"><span class="ls-n">5</span><span class="ls-l">Direct reports led</span></div>
-      <div class="ls-item"><span class="ls-n">₹30L</span><span class="ls-l">Annual budget owned</span></div>
-      <div class="ls-item"><span class="ls-n">5</span><span class="ls-l">Agencies managed</span></div>
-      <div class="ls-item"><span class="ls-n">9</span><span class="ls-l">Marquee events delivered</span></div>
-      <div class="ls-item"><span class="ls-n">8</span><span class="ls-l">Years across 3 sectors</span></div>
-    </div>
-
-    <h3 class="brand-grid-h reveal">Selected Brand Moments</h3>
-
-    <!-- 9 EVENT CARDS — 3x3 GRID -->
-    <div class="brand-grid">
-
-      <!-- 1. EXCON 2016 -->
-      <article class="bm-card reveal" onclick="toggleBM(this)" tabindex="0" role="button">
-        <div class="bm-img-wrap">
-          <img src="https://drive.google.com/thumbnail?id=1GWfaIth_HiQiqQggzuNXJrtlcdq02c9j&sz=w1000" alt="Excon 2016 Eicher Brand Activation" loading="lazy">
-        </div>
-        <div class="bm-body">
-          <div class="bm-meta">Eicher · 2016</div>
-          <h4>Excon 2016 — Eicher Brand Activation</h4>
-          <div class="bm-tag">Lead brand communication &amp; activation support</div>
-          <p class="bm-preview">Supported Eicher's brand presence for Excon 2016 through communication planning, event activation, collateral, and PR/media coordination. A strong example of B2B brand execution in a high-visibility industry event setting.</p>
-          <div class="bm-expand">
-            <p>Worked on Eicher's event communication and activation support for Excon 2016, aligning brand messaging, campaign assets, event touchpoints, and supporting PR/media content. A strong example of large-format B2B event execution and field-facing brand communication.</p>
-          </div>
-          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
-        </div>
-      </article>
-
-      <!-- 2. MERCEDES TROPHY -->
-      <article class="bm-card reveal rd1" onclick="toggleBM(this)" tabindex="0" role="button">
-        <div class="bm-img-wrap">
-          <img src="https://drive.google.com/thumbnail?id=1yAVeML9LbHKEmioDnEU1s4t0CVv9iczU&sz=w1000" alt="Mercedes Trophy Bhubaneswar" loading="lazy">
-        </div>
-        <div class="bm-body">
-          <div class="bm-meta">Mercedes-Benz · 2014</div>
-          <h4>Mercedes Trophy — Bhubaneswar</h4>
-          <div class="bm-tag">Regional execution support</div>
-          <p class="bm-preview">Contributed to the regional execution of the Mercedes Trophy customer engagement event in Bhubaneswar. Supported premium experience delivery, brand visibility, and audience engagement for a flagship luxury brand event.</p>
-          <div class="bm-expand">
-            <p>Contributed as part of the regional marketing team to the execution of Mercedes Trophy in Bhubaneswar, helping deliver a premium brand experience and strengthen customer engagement through event coordination and market-facing activation.</p>
-          </div>
-          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
-        </div>
-      </article>
-
-      <!-- 3. GLE LAUNCH -->
-      <article class="bm-card reveal rd2" onclick="toggleBM(this)" tabindex="0" role="button">
-        <div class="bm-img-wrap">
-          <img src="https://drive.google.com/thumbnail?id=1H89La7aO2RoDBWn5Yff-YEsLAssDy68Z&sz=w1000" alt="S-Class GLE Launch at Mayfair" loading="lazy">
-        </div>
-        <div class="bm-body">
-          <div class="bm-meta">Mercedes-Benz · Premium Launch</div>
-          <h4>S-Class / GLE Launch @ Mayfair</h4>
-          <div class="bm-tag">Product launch execution</div>
-          <p class="bm-preview">Supported high-profile premium automotive launch events, including launch communication and event experience coordination. Helped reinforce product prestige, customer engagement, and local brand presence.</p>
-          <div class="bm-expand">
-            <p>Contributed to launch execution for luxury automotive launches such as S-Class and GLE launch events, supporting the coordination of launch moments, premium display experience, and customer-facing engagement.</p>
-          </div>
-          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
-        </div>
-      </article>
-
-      <!-- 4. GLA OFFROAD / STAR DRIVE -->
-      <article class="bm-card reveal" onclick="toggleBM(this)" tabindex="0" role="button">
-        <div class="bm-img-wrap">
-          <img src="https://drive.google.com/thumbnail?id=1XEmp7M-5J4Jn95wI8GiiRWZFYk4EoKbN&sz=w1000" alt="GLA Offroad Star Drive Experience" loading="lazy">
-        </div>
-        <div class="bm-body">
-          <div class="bm-meta">Mercedes-Benz · Experiential</div>
-          <h4>GLA Offroad / Star Drive Experience</h4>
-          <div class="bm-tag">Experiential activation support</div>
-          <p class="bm-preview">Supported experiential drive events built around product immersion and live customer engagement. These events connected performance storytelling with direct, memorable brand interaction.</p>
-          <div class="bm-expand">
-            <p>Worked on execution support for drive and display experiences such as GLA offroad and Star Drive activities, helping deliver product-led experiential engagement and strengthen premium automotive brand recall.</p>
-          </div>
-          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
-        </div>
-      </article>
-
-      <!-- 5. AUDI Q DRIVE -->
-      <article class="bm-card reveal rd1" onclick="toggleBM(this)" tabindex="0" role="button">
-        <div class="bm-img-wrap">
-          <img src="https://drive.google.com/thumbnail?id=1rSkn_u1DINe7MxOKx3w5Z13FmZck0e4Z&sz=w1000" alt="Audi Q Drive" loading="lazy">
-        </div>
-        <div class="bm-body">
-          <div class="bm-meta">Audi Bhubaneswar · 2013</div>
-          <h4>Audi Q Drive</h4>
-          <div class="bm-tag">Team execution support</div>
-          <p class="bm-preview">Supported customer acquisition and premium engagement through Audi's Q Drive programme — test-drive engagement, lead generation, and brand introduction in an experience-led format.</p>
-          <div class="bm-expand">
-            <p>Contributed to Audi Bhubaneswar's Q Drive programme — supporting test-drive-led customer engagement, lead capture from premium buyers, and brand introduction activities. Built foundational instincts around premium consultative selling that still inform every sales enablement asset designed today.</p>
-          </div>
-          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
-        </div>
-      </article>
-
-      <!-- 6. AUDI RACE DRIVE -->
-      <article class="bm-card reveal rd2" onclick="toggleBM(this)" tabindex="0" role="button">
-        <div class="bm-img-wrap">
-          <img src="https://drive.google.com/thumbnail?id=1zjx-D48udWSFqc33hJsRQJWb0XSgxdMm&sz=w1000" alt="Audi Race Drive Experience" loading="lazy">
-        </div>
-        <div class="bm-body">
-          <div class="bm-meta">Audi Bhubaneswar · 2013</div>
-          <h4>Audi Race Drive Experience</h4>
-          <div class="bm-tag">Premium brand activation</div>
-          <p class="bm-preview">Supported Audi's Race Drive Experience as part of customer engagement initiatives. These events connected performance storytelling with hands-on customer experience in a premium automotive context.</p>
-          <div class="bm-expand">
-            <p>Worked on execution support for the Audi Race Drive Experience, helping coordinate the premium brand activation, customer experience moments, and performance-led storytelling. A key part of Audi Bhubaneswar's premium customer engagement strategy.</p>
-          </div>
-          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
-        </div>
-      </article>
-
-      <!-- 7. MERCEDES SHOWROOM LAUNCH -->
-      <article class="bm-card reveal" onclick="toggleBM(this)" tabindex="0" role="button">
-        <div class="bm-img-wrap">
-          <img src="https://drive.google.com/thumbnail?id=1xqltptlRNZOrtegXJAZBKQlgRhEB6c6k&sz=w1000" alt="Mercedes-Benz Showroom Launch Bhubaneswar" loading="lazy">
-        </div>
-        <div class="bm-body">
-          <div class="bm-meta">Mercedes-Benz · 2014</div>
-          <h4>Showroom Launch — Bhubaneswar</h4>
-          <div class="bm-tag">Launch event support</div>
-          <p class="bm-preview">Supported launch communications and event execution for the Mercedes-Benz showroom inauguration in Bhubaneswar. A key brand moment focused on visibility, experience, and launch readiness in a premium automotive setting.</p>
-          <div class="bm-expand">
-            <p>Supported the showroom inauguration experience through launch communication and execution coordination, helping create a premium first-impression brand environment and support local market expansion for Mercedes-Benz in Eastern India.</p>
-          </div>
-          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
-        </div>
-      </article>
-
-      <!-- 8. AUDI SHOWROOM LAUNCH -->
-      <article class="bm-card reveal rd1" onclick="toggleBM(this)" tabindex="0" role="button">
-        <div class="bm-img-wrap">
-          <img src="https://drive.google.com/thumbnail?id=1mvZV9efq-6RYF2wUYbRDRqI-JA62UZZK&sz=w1000" alt="Audi Showroom Launch Bhubaneswar" loading="lazy">
-        </div>
-        <div class="bm-body">
-          <div class="bm-meta">Audi Bhubaneswar · 2013</div>
-          <h4>Audi Showroom Launch</h4>
-          <div class="bm-tag">Launch event support</div>
-          <p class="bm-preview">Supported the Audi showroom launch in Bhubaneswar — a flagship premium automotive arrival moment focused on brand introduction, customer experience, and market expansion in Eastern India.</p>
-          <div class="bm-expand">
-            <p>Contributed to Audi Bhubaneswar's showroom launch through customer-facing event support, lead engagement, and brand introduction activities. Part of bringing the Audi brand experience to a new regional market.</p>
-          </div>
-          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
-        </div>
-      </article>
-
-      <!-- 9. BHUSHAN STEEL -->
-      <article class="bm-card reveal rd2" onclick="toggleBM(this)" tabindex="0" role="button">
-        <div class="bm-img-wrap">
-          <img src="https://drive.google.com/thumbnail?id=1SZEpV-K1015Q2xevVUKkkhC7Ws84cvvb&sz=w1000" alt="National Safety Day at Bhushan Steel" loading="lazy">
-        </div>
-        <div class="bm-body">
-          <div class="bm-meta">Utkal Industrial · ~2012</div>
-          <h4>National Safety Day · Bhushan Steel</h4>
-          <div class="bm-tag">Field marketing &amp; safety enablement</div>
-          <p class="bm-preview">Supported industrial safety awareness and product demonstration activities at Bhushan Steel as part of Utkal Industrial's field marketing programme. A formative B2B execution moment in industrial safety.</p>
-          <div class="bm-expand">
-            <p>Contributed to Utkal Industrial's field-driven marketing approach by supporting product demonstrations, safety awareness events, and direct customer enablement at industrial sites including Bhushan Steel. These engagements built the buyer instincts and B2B sales discipline that informed every marketing role since.</p>
-          </div>
-          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
-        </div>
-      </article>
-
-    </div>
-
-    <!-- PR & MEDIA STRIP -->
-    <div class="pr-media-strip reveal">
-      <div class="pr-icon">
-        <svg viewBox="0 0 32 32" fill="none">
-          <path d="M6 13v6a2 2 0 002 2h2l8 6V5l-8 6H8a2 2 0 00-2 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="M22 10c2 1.5 3 3.5 3 6s-1 4.5-3 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="pr-body">
-        <h3>PR, Media &amp; Executive Communications</h3>
-        <p>Across Mercedes-Benz, Eicher, and VE Commercial Vehicles — worked with regional and national media ecosystems for PR, product launches, brand visibility, and external communication.</p>
-        <div class="pr-eco-label">Media ecosystem</div>
-        <div class="pr-chips">
-          <span class="pr-chip">Sambad</span>
-          <span class="pr-chip">Samaj</span>
-          <span class="pr-chip">Times of India</span>
-          <span class="pr-chip">Economic Times</span>
-          <span class="pr-chip">ET Auto</span>
-          <span class="pr-chip">Autocar</span>
-          <span class="pr-chip">CarWale</span>
-          <span class="pr-chip">Regional Odia media</span>
-          <span class="pr-chip">Automotive trade media</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- DEMAND GENERATION STRIP -->
-<section id="demand-gen" class="dg-section">
-  <div class="container">
-    <div class="dg-strip reveal">
-      <div class="dg-num">15<span>+</span><br><em>YEARS</em></div>
-      <div class="dg-body">
-        <h2 class="dg-h">Pipeline-connected marketing — across 5 sectors.</h2>
-        <p class="dg-p">Multi-channel demand generation across email, LinkedIn, paid media, webinars, and outbound. SQL volume tracking, MQL-to-SQL conversion optimisation, EMEA campaign execution, and lead generation operations with ZoomInfo, Apollo, HubSpot, and intent data.</p>
-        <p class="dg-tagline"><em>Every campaign tied to pipeline. Every pipeline tied to revenue.</em></p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- WHAT I BUILD -->
 <section id="what-i-build" class="alt-bg">
   <div class="container">
@@ -1655,61 +1595,47 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
 
       <div class="bc reveal">
         <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M14 4v3M14 21v3M4 14h3M21 14h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M10 18l4-10 4 10-4-3-4 3z" fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
-        <div class="bc-tag">GTM</div>
-        <h3>AI GTM Systems</h3>
-        <p>Market narratives, ICPs, launch plans, and sales motions — from business requirement to market-ready story.</p>
+        <div class="bc-tag">GTM &amp; Product Marketing</div>
+        <h3>AI GTM &amp; Product Marketing</h3>
+        <p>Market narratives, ICPs, launch plans, sales motions, and product positioning — from business requirement to market-ready story.</p>
       </div>
 
       <div class="bc reveal rd1">
-        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M14 4l8 5v10l-8 5-8-5V9l8-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 4v20M22 9l-16 10M6 9l16 10" stroke="currentColor" stroke-width="1.2" opacity=".5"/></svg></div>
-        <div class="bc-tag">Product Marketing</div>
-        <h3>Product Marketing Narratives</h3>
-        <p>Messaging built for medical affairs, commercial directors, and brand leads — not generic tech audiences.</p>
-      </div>
-
-      <div class="bc reveal rd2">
         <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 11h22" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="8.5" r=".7" fill="currentColor"/><path d="M8 17l3-3 3 2 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="bc-tag">Sales</div>
         <h3>Sales Enablement Engines</h3>
         <p>Pitch decks, one-pagers, discovery guides, and battle cards — content that helps salespeople close.</p>
       </div>
 
-      <div class="bc reveal">
-        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><rect x="5" y="8" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="11" cy="14" r="1.4" fill="currentColor"/><circle cx="17" cy="14" r="1.4" fill="currentColor"/><path d="M11 18h6M14 5v3M9 8l-2-2M19 8l2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <div class="bc-tag">Agentic AI</div>
-        <h3>Agentic Content Operations</h3>
-        <p>Workflows in Claude Projects, n8n, and ChatGPT Agents — running content at scale without a human bottleneck.</p>
+      <div class="bc reveal rd2">
+        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M4 7h20M4 14h20M4 21h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="7" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="14" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/><circle cx="14" cy="21" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <div class="bc-tag">Agentic AI · Scoping</div>
+        <h3>AI Product Scoping &amp; Execution</h3>
+        <p>End-to-end with tech teams: PRD writing, use case definition, agentic workflows in Claude Projects and n8n, pilot design, and GTM launch.</p>
       </div>
 
-      <div class="bc reveal rd1">
+      <div class="bc reveal">
         <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="22" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="21" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="22" cy="21" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 8l4 4M20 8l-4 4M8 20l4-4M20 20l-4-4" stroke="currentColor" stroke-width="1.4"/></svg></div>
         <div class="bc-tag">Intelligence</div>
         <h3>CRM &amp; Customer Intelligence</h3>
         <p>Connected pipelines across Salesforce, Veeva, and Pipedrive — enriched with Apollo, activated through ActiveCampaign.</p>
       </div>
 
-      <div class="bc reveal rd2">
+      <div class="bc reveal rd1">
         <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M14 3l3 6 6 1-4 5 1 7-6-3-6 3 1-7-4-5 6-1 3-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
         <div class="bc-tag">Brand</div>
         <h3>Thought Leadership Platforms</h3>
         <p>AI Exchange is the proof — built from zero, led by a pharma marketer, for pharma marketers.</p>
       </div>
 
-      <div class="bc reveal">
-        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M4 7h20M4 14h20M4 21h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="7" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="14" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/><circle cx="14" cy="21" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <div class="bc-tag">Product Scoping</div>
-        <h3>AI Product Scoping &amp; Execution</h3>
-        <p>End-to-end with tech teams: PRD writing, use case definition, pilot design, and GTM launch.</p>
-      </div>
-
-      <div class="bc reveal rd1">
+      <div class="bc reveal rd2">
         <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M17 17l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 12h6M9 9h6M9 15h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
         <div class="bc-tag">AEO &amp; SEO</div>
         <h3>AEO &amp; Content Optimisation</h3>
         <p>Answer Engine Optimisation with SEMrush and Google Search Console — schema design and search visibility.</p>
       </div>
 
-    </div>
+    </div></div>
   </div>
 </section>
 
@@ -2021,6 +1947,228 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
   </div>
 </section>
 
+<!-- WHAT I'VE SHIPPED ACROSS 15 YEARS (renamed from Before AI) -->
+<section id="before-ai" class="before-ai-bg">
+  <div class="container">
+    <div class="eyebrow reveal">Track Record</div>
+    <div class="rule"></div>
+    <h2 class="section-h2 reveal">What I've Shipped Across 15 Years</h2>
+    <p class="track-record-sub reveal">B2B-dominant career — PPE, automotive, pharma, AI.</p>
+    <p class="lead reveal">Fifteen years of shipped output across pharma AI, automotive, industrial B2B, and pharma consulting. Platforms, products, brand launches, and AI workflows — built across sectors, taken to market, and made to perform.</p>
+
+    <!-- OUTPUT-LED KPI STRIP -->
+    <div class="leadership-strip reveal">
+      <div class="ls-item"><span class="ls-n">1</span><span class="ls-l">AI platform — positioned &amp; shaped for pharma</span></div>
+      <div class="ls-item"><span class="ls-n">5</span><span class="ls-l">AI use cases — commercial &amp; medical workflows</span></div>
+      <div class="ls-item"><span class="ls-n">8</span><span class="ls-l">Premium auto products — market entry</span></div>
+      <div class="ls-item"><span class="ls-n">3</span><span class="ls-l">Brand launches owned</span></div>
+      <div class="ls-item"><span class="ls-n">15+</span><span class="ls-l">Years across PPE · auto · pharma · AI</span></div>
+    </div>
+
+    <h3 class="brand-grid-h reveal">Before I built AI, I built brands.</h3>
+    <p class="brand-grid-sub reveal">Selected brand moments.</p>
+
+    <!-- 9 EVENT CARDS — 3x3 GRID -->
+    <div class="brand-grid">
+
+      <!-- 1. EXCON 2016 -->
+      <article class="bm-card reveal" onclick="toggleBM(this)" tabindex="0" role="button">
+        <div class="bm-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1GWfaIth_HiQiqQggzuNXJrtlcdq02c9j&sz=w1000" alt="Excon 2016 Eicher Brand Activation" loading="lazy">
+        </div>
+        <div class="bm-body">
+          <div class="bm-meta">Eicher · 2016</div>
+          <h4>Excon 2016 — Eicher Brand Activation</h4>
+          <div class="bm-tag">Lead brand communication &amp; activation support</div>
+          <p class="bm-preview">Supported Eicher's brand presence for Excon 2016 through communication planning, event activation, collateral, and PR/media coordination. A strong example of B2B brand execution in a high-visibility industry event setting.</p>
+          <div class="bm-expand">
+            <p>Worked on Eicher's event communication and activation support for Excon 2016, aligning brand messaging, campaign assets, event touchpoints, and supporting PR/media content. A strong example of large-format B2B event execution and field-facing brand communication.</p>
+          </div>
+          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
+        </div>
+      </article>
+
+      <!-- 2. MERCEDES TROPHY -->
+      <article class="bm-card reveal rd1" onclick="toggleBM(this)" tabindex="0" role="button">
+        <div class="bm-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1yAVeML9LbHKEmioDnEU1s4t0CVv9iczU&sz=w1000" alt="Mercedes Trophy Bhubaneswar" loading="lazy">
+        </div>
+        <div class="bm-body">
+          <div class="bm-meta">Mercedes-Benz · 2014</div>
+          <h4>Mercedes Trophy — Bhubaneswar</h4>
+          <div class="bm-tag">Regional execution support</div>
+          <p class="bm-preview">Contributed to the regional execution of the Mercedes Trophy customer engagement event in Bhubaneswar. Supported premium experience delivery, brand visibility, and audience engagement for a flagship luxury brand event.</p>
+          <div class="bm-expand">
+            <p>Contributed as part of the regional marketing team to the execution of Mercedes Trophy in Bhubaneswar, helping deliver a premium brand experience and strengthen customer engagement through event coordination and market-facing activation.</p>
+          </div>
+          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
+        </div>
+      </article>
+
+      <!-- 3. GLE LAUNCH -->
+      <article class="bm-card reveal rd2" onclick="toggleBM(this)" tabindex="0" role="button">
+        <div class="bm-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1H89La7aO2RoDBWn5Yff-YEsLAssDy68Z&sz=w1000" alt="S-Class GLE Launch at Mayfair" loading="lazy">
+        </div>
+        <div class="bm-body">
+          <div class="bm-meta">Mercedes-Benz · Premium Launch</div>
+          <h4>S-Class / GLE Launch @ Mayfair</h4>
+          <div class="bm-tag">Product launch execution</div>
+          <p class="bm-preview">Supported high-profile premium automotive launch events, including launch communication and event experience coordination. Helped reinforce product prestige, customer engagement, and local brand presence.</p>
+          <div class="bm-expand">
+            <p>Contributed to launch execution for luxury automotive launches such as S-Class and GLE launch events, supporting the coordination of launch moments, premium display experience, and customer-facing engagement.</p>
+          </div>
+          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
+        </div>
+      </article>
+
+      <!-- 4. GLA OFFROAD / STAR DRIVE -->
+      <article class="bm-card reveal" onclick="toggleBM(this)" tabindex="0" role="button">
+        <div class="bm-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1XEmp7M-5J4Jn95wI8GiiRWZFYk4EoKbN&sz=w1000" alt="GLA Offroad Star Drive Experience" loading="lazy">
+        </div>
+        <div class="bm-body">
+          <div class="bm-meta">Mercedes-Benz · Experiential</div>
+          <h4>GLA Offroad / Star Drive Experience</h4>
+          <div class="bm-tag">Experiential activation support</div>
+          <p class="bm-preview">Supported experiential drive events built around product immersion and live customer engagement. These events connected performance storytelling with direct, memorable brand interaction.</p>
+          <div class="bm-expand">
+            <p>Worked on execution support for drive and display experiences such as GLA offroad and Star Drive activities, helping deliver product-led experiential engagement and strengthen premium automotive brand recall.</p>
+          </div>
+          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
+        </div>
+      </article>
+
+      <!-- 5. AUDI Q DRIVE -->
+      <article class="bm-card reveal rd1" onclick="toggleBM(this)" tabindex="0" role="button">
+        <div class="bm-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1rSkn_u1DINe7MxOKx3w5Z13FmZck0e4Z&sz=w1000" alt="Audi Q Drive" loading="lazy">
+        </div>
+        <div class="bm-body">
+          <div class="bm-meta">Audi Bhubaneswar · 2013</div>
+          <h4>Audi Q Drive</h4>
+          <div class="bm-tag">Team execution support</div>
+          <p class="bm-preview">Supported customer acquisition and premium engagement through Audi's Q Drive programme — test-drive engagement, lead generation, and brand introduction in an experience-led format.</p>
+          <div class="bm-expand">
+            <p>Contributed to Audi Bhubaneswar's Q Drive programme — supporting test-drive-led customer engagement, lead capture from premium buyers, and brand introduction activities. Built foundational instincts around premium consultative selling that still inform every sales enablement asset designed today.</p>
+          </div>
+          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
+        </div>
+      </article>
+
+      <!-- 6. AUDI RACE DRIVE -->
+      <article class="bm-card reveal rd2" onclick="toggleBM(this)" tabindex="0" role="button">
+        <div class="bm-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1zjx-D48udWSFqc33hJsRQJWb0XSgxdMm&sz=w1000" alt="Audi Race Drive Experience" loading="lazy">
+        </div>
+        <div class="bm-body">
+          <div class="bm-meta">Audi Bhubaneswar · 2013</div>
+          <h4>Audi Race Drive Experience</h4>
+          <div class="bm-tag">Premium brand activation</div>
+          <p class="bm-preview">Supported Audi's Race Drive Experience as part of customer engagement initiatives. These events connected performance storytelling with hands-on customer experience in a premium automotive context.</p>
+          <div class="bm-expand">
+            <p>Worked on execution support for the Audi Race Drive Experience, helping coordinate the premium brand activation, customer experience moments, and performance-led storytelling. A key part of Audi Bhubaneswar's premium customer engagement strategy.</p>
+          </div>
+          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
+        </div>
+      </article>
+
+      <!-- 7. MERCEDES SHOWROOM LAUNCH -->
+      <article class="bm-card reveal" onclick="toggleBM(this)" tabindex="0" role="button">
+        <div class="bm-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1xqltptlRNZOrtegXJAZBKQlgRhEB6c6k&sz=w1000" alt="Mercedes-Benz Showroom Launch Bhubaneswar" loading="lazy">
+        </div>
+        <div class="bm-body">
+          <div class="bm-meta">Mercedes-Benz · 2014</div>
+          <h4>Showroom Launch — Bhubaneswar</h4>
+          <div class="bm-tag">Launch event support</div>
+          <p class="bm-preview">Supported launch communications and event execution for the Mercedes-Benz showroom inauguration in Bhubaneswar. A key brand moment focused on visibility, experience, and launch readiness in a premium automotive setting.</p>
+          <div class="bm-expand">
+            <p>Supported the showroom inauguration experience through launch communication and execution coordination, helping create a premium first-impression brand environment and support local market expansion for Mercedes-Benz in Eastern India.</p>
+          </div>
+          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
+        </div>
+      </article>
+
+      <!-- 8. AUDI SHOWROOM LAUNCH -->
+      <article class="bm-card reveal rd1" onclick="toggleBM(this)" tabindex="0" role="button">
+        <div class="bm-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1mvZV9efq-6RYF2wUYbRDRqI-JA62UZZK&sz=w1000" alt="Audi Showroom Launch Bhubaneswar" loading="lazy">
+        </div>
+        <div class="bm-body">
+          <div class="bm-meta">Audi Bhubaneswar · 2013</div>
+          <h4>Audi Showroom Launch</h4>
+          <div class="bm-tag">Launch event support</div>
+          <p class="bm-preview">Supported the Audi showroom launch in Bhubaneswar — a flagship premium automotive arrival moment focused on brand introduction, customer experience, and market expansion in Eastern India.</p>
+          <div class="bm-expand">
+            <p>Contributed to Audi Bhubaneswar's showroom launch through customer-facing event support, lead engagement, and brand introduction activities. Part of bringing the Audi brand experience to a new regional market.</p>
+          </div>
+          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
+        </div>
+      </article>
+
+      <!-- 9. BHUSHAN STEEL -->
+      <article class="bm-card reveal rd2" onclick="toggleBM(this)" tabindex="0" role="button">
+        <div class="bm-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1SZEpV-K1015Q2xevVUKkkhC7Ws84cvvb&sz=w1000" alt="National Safety Day at Bhushan Steel" loading="lazy">
+        </div>
+        <div class="bm-body">
+          <div class="bm-meta">Utkal Industrial · ~2012</div>
+          <h4>National Safety Day · Bhushan Steel</h4>
+          <div class="bm-tag">Field marketing &amp; safety enablement</div>
+          <p class="bm-preview">Supported industrial safety awareness and product demonstration activities at Bhushan Steel as part of Utkal Industrial's field marketing programme. A formative B2B execution moment in industrial safety.</p>
+          <div class="bm-expand">
+            <p>Contributed to Utkal Industrial's field-driven marketing approach by supporting product demonstrations, safety awareness events, and direct customer enablement at industrial sites including Bhushan Steel. These engagements built the buyer instincts and B2B sales discipline that informed every marketing role since.</p>
+          </div>
+          <span class="bm-cta">Read more <span class="bm-arrow">+</span></span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- PR & MEDIA STRIP -->
+    <div class="pr-media-strip reveal">
+      <div class="pr-icon">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M6 13v6a2 2 0 002 2h2l8 6V5l-8 6H8a2 2 0 00-2 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M22 10c2 1.5 3 3.5 3 6s-1 4.5-3 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="pr-body">
+        <h3>PR, Media &amp; Executive Communications</h3>
+        <p>Across Mercedes-Benz, Eicher, and VE Commercial Vehicles — worked with regional and national media ecosystems for PR, product launches, brand visibility, and external communication.</p>
+        <div class="pr-eco-label">Media ecosystem</div>
+        <div class="pr-chips">
+          <span class="pr-chip">Sambad</span>
+          <span class="pr-chip">Samaj</span>
+          <span class="pr-chip">Times of India</span>
+          <span class="pr-chip">Economic Times</span>
+          <span class="pr-chip">ET Auto</span>
+          <span class="pr-chip">Autocar</span>
+          <span class="pr-chip">CarWale</span>
+          <span class="pr-chip">Regional Odia media</span>
+          <span class="pr-chip">Automotive trade media</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DEMAND GENERATION STRIP -->
+<section id="demand-gen" class="dg-section">
+  <div class="container">
+    <div class="dg-strip reveal">
+      <div class="dg-num">15<span>+</span><br><em>YEARS</em></div>
+      <div class="dg-body">
+        <h2 class="dg-h">Pipeline-connected marketing — across 5 sectors.</h2>
+        <p class="dg-p">Multi-channel demand generation across email, LinkedIn, paid media, webinars, and outbound. SQL volume tracking, MQL-to-SQL conversion optimisation, EMEA campaign execution, and lead generation operations with ZoomInfo, Apollo, HubSpot, and intent data.</p>
+        <p class="dg-tagline"><em>Every campaign tied to pipeline. Every pipeline tied to revenue.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROOF GRID -->
 <section id="proof-grid" class="alt-bg">
   <div class="container">
@@ -2030,10 +2178,10 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
     <p class="lead reveal">A curated portfolio of strategic, GTM, sales enablement, creative, and business storytelling work. Some materials are blinded to protect client confidentiality — the thinking, systems, and execution are fully visible.</p>
     <div class="proof-cards">
       <div class="pc reveal"><div class="pc-num">01 · Platform</div><div class="pc-icon platform"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M3 12h18M12 3a13 13 0 010 18M12 3a13 13 0 000 18" stroke-width="1.5"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg></div><h3>AI Platform Website &amp; Product Storytelling</h3><p>Public-facing AI pharma platform — website narrative, solution positioning, product storytelling, and value communication for Ariya.ai.</p><a href="https://ariya.ai/" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal rd1"><div class="pc-num">02 · Strategy</div><div class="pc-icon strategy"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Strategic Documents</h3><p>GTM thinking, market narrative, ICP frameworks, positioning, launch planning, AI use-case strategy, and commercial intelligence documents.</p><a href="https://drive.google.com/drive/folders/1JlY3-LujDHJe66WR2yZICAsUsLJuKCeM?usp=drive_link" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal rd2"><div class="pc-num">03 · Presentations</div><div class="pc-icon presentation"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="13" rx="1" stroke-width="1.5"/><path d="M7 13l3-3 2 2 4-5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21h6M12 17v4" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Executive Presentations</h3><p>Leadership storytelling, AI product communication, commercial narratives, webinar decks, and stakeholder-ready communication.</p><a href="https://drive.google.com/drive/folders/1LZN0KIcJbZsbSEFjANA6qRjILMNB_ni6?usp=sharing" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal"><div class="pc-num">04 · Business Narrative</div><div class="pc-icon investor"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 17l5-5 4 4 8-8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg></div><h3>Investor &amp; Business Narrative Materials</h3><p>Market opportunity framing, business storytelling, growth narrative, differentiation positioning, and executive-level value communication.</p><a href="https://drive.google.com/drive/folders/1ulAXbXHe8oIHgutOvPUlH_TloSPuSo7T?usp=sharing" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal rd1"><div class="pc-num">05 · Conversion</div><div class="pc-icon landing"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke-width="1.5"/><path d="M3 8h18" stroke-width="1.5"/><circle cx="6" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="8" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="10" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="14" cy="14" r="3" stroke-width="1.5"/><path d="M14 14l4 4" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Landing Pages &amp; Proposals</h3><p>Conversion-focused messaging, campaign landing pages, proposal narratives, offer framing, and deal-support communication.</p><a href="https://drive.google.com/drive/folders/1Rt5tkcbV0f1OALdltjCSOh-MxuIwCrCz?usp=drive_link" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal rd1"><div class="pc-num">02 · Strategy</div><div class="pc-icon strategy"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Strategic Documents</h3><p>GTM thinking, market narrative, ICP frameworks, positioning, launch planning, AI use-case strategy, and commercial intelligence documents.</p><a href="https://indubehera.github.io/work-portfolio/strategic-documents.html" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal rd2"><div class="pc-num">03 · Presentations</div><div class="pc-icon presentation"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="13" rx="1" stroke-width="1.5"/><path d="M7 13l3-3 2 2 4-5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21h6M12 17v4" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Executive Presentations</h3><p>Leadership storytelling, AI product communication, commercial narratives, webinar decks, and stakeholder-ready communication.</p><a href="https://indubehera.github.io/work-portfolio/presentations.html" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal"><div class="pc-num">04 · Business Narrative</div><div class="pc-icon investor"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 17l5-5 4 4 8-8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg></div><h3>Investor &amp; Business Narrative Materials</h3><p>Market opportunity framing, business storytelling, growth narrative, differentiation positioning, and executive-level value communication.</p><a href="https://indubehera.github.io/work-portfolio/Investor-pitch.html" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal rd1"><div class="pc-num">05 · Application Proposals</div><div class="pc-icon landing"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke-width="1.5"/><path d="M3 8h18" stroke-width="1.5"/><circle cx="6" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="8" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="10" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="14" cy="14" r="3" stroke-width="1.5"/><path d="M14 14l4 4" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Application Proposals</h3><p>Live application simulations and proposal demos — built to show concepts in action, not just describe them. From conversion-focused proposal narratives to working tool prototypes.</p><a href="https://kolens-plum.vercel.app/" target="_blank" rel="noopener" class="pc-lnk">View Live Demo →</a></div>
       <div class="pc reveal rd2"><div class="pc-num">06 · Sales Enablement</div><div class="pc-icon sales"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>GTM &amp; Business Development Enablers</h3><p>Pitch decks, one-pagers, objection-handling frameworks, discovery guides, and buyer-facing assets for enterprise deals.</p><a href="https://drive.google.com/drive/folders/1OZuJyZXduMUpKEXhye1v5cu3ShA_shRu?usp=sharing" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
       <div class="pc reveal"><div class="pc-num">07 · Creative</div><div class="pc-icon creative"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a9 9 0 109 9c0-1-1-2-2-2h-2a2 2 0 010-4h1a3 3 0 003-3 6 6 0 00-9 0z" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="11" cy="7" r="1" fill="currentColor" stroke="none"/><circle cx="14" cy="7" r="1" fill="currentColor" stroke="none"/></svg></div><h3>Creative Campaign Assets</h3><p>LinkedIn creatives, campaign visuals, event backgrounds, brand assets, and visual storytelling across B2B SaaS, pharma, and automotive.</p><a href="https://drive.google.com/drive/folders/1RkY4dwNRO6CRkjdn0MI9zdfGvk7kVuda?usp=sharing" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
       <div class="pc reveal rd1"><div class="pc-num">08 · Case Studies</div><div class="pc-icon casestudy"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7a1 1 0 011-1h5l2 2h9a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7z" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 13l2 2 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Case Study Library</h3><p>Problem-solution-impact storytelling, business outcomes, strategic execution proof, and applied marketing results.</p><a href="https://drive.google.com/drive/folders/1mZ5R5Cqcsk_MTWImU_lDhHm4bZuAJIbq?usp=drive_link" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
@@ -2183,34 +2331,91 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
   </div>
 </section>
 
-<!-- TOOLS -->
+<!-- TOOLS (compressed strip) -->
 <section id="tools">
   <div class="container">
     <div class="eyebrow reveal">Tools &amp; Platforms</div>
     <div class="rule"></div>
     <h2 class="section-h2 reveal">The Full Stack</h2>
-    <p class="lead reveal">The combination is the proof. Veeva + Databricks + Apollo + Claude + n8n isn't a list of credentials — it's evidence of cross-stack, pharma-native, AI-first execution.</p>
-    <div class="tools-v2">
-      <div class="tg-v2 reveal">
-        <div class="tg-v2-head"><h3>AI &amp; Agentic Workflows</h3><span class="tg-v2-ctx">What I build with daily</span></div>
-        <div class="sk-chips"><span class="sk">Claude</span><span class="sk">Claude Projects</span><span class="sk">ChatGPT Agents</span><span class="sk">Microsoft Copilot</span><span class="sk">n8n</span><span class="sk">Gemini</span><span class="sk">Perplexity</span></div>
+    <p class="lead reveal">The combination is the proof — pharma-native CRM, enterprise demand-gen stack, and AI-native execution layer.</p>
+
+    <div class="tools-strip reveal">
+      <div class="tools-chip-row">
+        <span class="t-chip ai">Claude</span>
+        <span class="t-chip ai">Claude Projects</span>
+        <span class="t-chip ai">ChatGPT Agents</span>
+        <span class="t-chip ai">Microsoft Copilot</span>
+        <span class="t-chip ai">n8n</span>
+        <span class="t-chip ai">Gemini</span>
+        <span class="t-chip ai">Perplexity</span>
+        <span class="t-chip crm">Salesforce</span>
+        <span class="t-chip crm">Veeva CRM</span>
+        <span class="t-chip crm">Odoo</span>
+        <span class="t-chip crm">Pipedrive</span>
+        <span class="t-chip crm">HubSpot</span>
+        <span class="t-chip crm">LinkedIn Sales Navigator</span>
+        <span class="t-chip dg">ActiveCampaign</span>
+        <span class="t-chip dg">GetResponse</span>
+        <span class="t-chip dg">Marketo</span>
+        <span class="t-chip dg">Apollo.io</span>
+        <span class="t-chip dg">ZoomInfo</span>
+        <span class="t-chip seo">SEMrush</span>
+        <span class="t-chip seo">Google Search Console</span>
+        <span class="t-chip seo">GA4</span>
+        <span class="t-chip cd">Canva</span>
+        <span class="t-chip cd">Notion</span>
+        <span class="t-chip cd">Lovable</span>
+        <span class="t-chip cd">Google Workspace</span>
+        <span class="t-chip cd">Microsoft Office</span>
+        <span class="t-chip cd">PowerPoint</span>
       </div>
-      <div class="tg-v2 reveal rd1">
-        <div class="tg-v2-head"><h3>CRM &amp; Sales</h3><span class="tg-v2-ctx">Pharma-native + enterprise B2B</span></div>
-        <div class="sk-chips"><span class="sk">Salesforce</span><span class="sk">Veeva CRM</span><span class="sk">Odoo</span><span class="sk">Pipedrive</span><span class="sk">HubSpot</span><span class="sk">LinkedIn Sales Navigator</span></div>
+      <div class="tools-legend">
+        <span class="legend-item"><span class="legend-dot ai"></span> AI &amp; Agentic</span>
+        <span class="legend-item"><span class="legend-dot crm"></span> CRM &amp; Sales</span>
+        <span class="legend-item"><span class="legend-dot dg"></span> Demand Gen</span>
+        <span class="legend-item"><span class="legend-dot seo"></span> SEO/AEO</span>
+        <span class="legend-item"><span class="legend-dot cd"></span> Content &amp; Design</span>
       </div>
-      <div class="tg-v2 reveal rd2">
-        <div class="tg-v2-head"><h3>Email &amp; Lead Enrichment</h3><span class="tg-v2-ctx">Demand gen and outreach engine</span></div>
-        <div class="sk-chips"><span class="sk">ActiveCampaign</span><span class="sk">GetResponse</span><span class="sk">Marketo</span><span class="sk">Apollo.io</span><span class="sk">ZoomInfo</span></div>
-      </div>
-      <div class="tg-v2 reveal">
-        <div class="tg-v2-head"><h3>SEO &amp; AEO</h3><span class="tg-v2-ctx">Answer Engine Optimisation</span></div>
-        <div class="sk-chips"><span class="sk">SEMrush</span><span class="sk">Google Search Console</span><span class="sk">GA4</span></div>
-      </div>
-      <div class="tg-v2 reveal rd1">
-        <div class="tg-v2-head"><h3>Content &amp; Design</h3><span class="tg-v2-ctx">Production and prototyping</span></div>
-        <div class="sk-chips"><span class="sk">Canva</span><span class="sk">Notion</span><span class="sk">Lovable</span><span class="sk">Google Workspace</span><span class="sk">Microsoft Office</span><span class="sk">PowerPoint</span></div>
-      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITIES & INFLUENCE -->
+<section id="communities" class="alt-bg">
+  <div class="container">
+    <div class="eyebrow reveal">Communities &amp; Influence</div>
+    <div class="rule"></div>
+    <h2 class="section-h2 reveal">Where I learn, contribute, and stay sharp.</h2>
+    <p class="lead reveal">Senior marketing only stays senior if it keeps learning. Two communities I'm actively part of — one I founded, one I belong to.</p>
+
+    <div class="comm-grid">
+
+      <a class="comm-card reveal" href="https://ariya.ai/resources/" target="_blank" rel="noopener">
+        <div class="comm-img">
+          <img src="https://drive.google.com/thumbnail?id=18gngSnqxT7V1SYmJqTGTURzDSRYgUFdz&sz=w1000" alt="AI Exchange — Powered by Ariya" loading="lazy">
+        </div>
+        <div class="comm-body">
+          <span class="comm-role founder">Founder</span>
+          <h3>AI Exchange</h3>
+          <p class="comm-sub">Powered by Ariya · AI in Pharma Marketing</p>
+          <p class="comm-desc">Independent AI education forum founded for pharma marketing practitioners — webinars, executive roundtables, and community-building.</p>
+          <span class="comm-cta">Visit AI Exchange <span class="comm-arrow">↗</span></span>
+        </div>
+      </a>
+
+      <a class="comm-card reveal rd1" href="https://lanclub.live/" target="_blank" rel="noopener">
+        <div class="comm-img">
+          <img src="https://drive.google.com/thumbnail?id=1-jmprHKSZPrqzc8Jd1IWPh5ygaurRBf6&sz=w1000" alt="LAN — Local Area Network" loading="lazy">
+        </div>
+        <div class="comm-body">
+          <span class="comm-role member">Member</span>
+          <h3>LAN — Local Area Network</h3>
+          <p class="comm-sub">Marketing Community · Bangalore</p>
+          <p class="comm-desc">Curated non-profit network of 1,500+ marketing, brand, and growth professionals — where senior marketers learn, debate, and stay sharp.</p>
+          <span class="comm-cta">Visit LAN <span class="comm-arrow">↗</span></span>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
