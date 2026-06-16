@@ -1258,6 +1258,61 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
 .comm-arrow{transition:transform .25s}
 .comm-card:hover .comm-arrow{transform:translate(2px,-2px)}
 
+
+/* ── CONSULTING COMPRESSED STRIP ── */
+.consulting-strip{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:2.5rem;
+  background:var(--parch);
+  border:1px solid var(--border-warm);
+  border-left:4px solid var(--verm);
+  border-radius:6px;
+  padding:2rem 2.5rem;
+  margin-top:1rem;
+}
+@media(max-width:760px){
+  .consulting-strip{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.75rem}
+}
+
+.cs-strip-text{flex:1;max-width:680px}
+.cs-strip-h{
+  font-family:var(--font-display);font-size:clamp(1.15rem,2.1vw,1.5rem);
+  font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:.65rem;
+}
+.cs-strip-p{
+  font-size:.88rem;color:var(--muted);line-height:1.7;
+  font-family:var(--font-body);
+}
+
+.cs-strip-cta{
+  flex-shrink:0;text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:.5rem;
+}
+@media(max-width:760px){.cs-strip-cta{align-items:flex-start;text-align:left}}
+
+.btn-cta-large{
+  display:inline-block;
+  background:var(--verm);color:#fff;
+  padding:.95rem 2.1rem;
+  border-radius:4px;
+  font-family:var(--font-body);font-size:.92rem;font-weight:700;
+  letter-spacing:.05em;text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid var(--verm);
+  transition:all .25s;
+  box-shadow:0 4px 14px rgba(181,71,42,.22);
+}
+.btn-cta-large:hover{
+  background:#7a2f1a;border-color:#7a2f1a;
+  transform:translateY(-2px);
+  box-shadow:0 8px 22px rgba(181,71,42,.32);
+}
+
+.cs-strip-note{
+  font-size:.7rem;color:var(--muted);font-style:italic;
+  font-family:var(--font-body);letter-spacing:.04em;
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -1274,9 +1329,7 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
       <li><a href="#about">About</a></li>
       <li><a href="#career-arc">Career</a></li>
       <li><a href="#ai-use-cases">AI Use Cases</a></li>
-      <li><a href="#proof-grid">Work</a></li>
-      <li><a href="#case-studies">Case Studies</a></li>
-      <li><a href="#frameworks">Frameworks</a></li>
+      <li><a href="#proof-grid">Work Portfolio</a></li>
       <li><a href="#consulting">Consulting</a></li>
     </ul>
     <div class="nav-actions">
@@ -1302,7 +1355,7 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
       <p class="hero-sub">Founding team member of Ariya.ai. 15+ years translating complex technology into market-ready GTM systems, sales enablement engines, and pipeline-focused growth — across AI-powered SaaS, pharma/life sciences, and enterprise B2B.</p>
       <div class="cta-row">
         <a href="#proof-grid" class="btn-p">Explore My Work</a>
-        <a href="https://drive.google.com/file/d/1Pjfhl1CDH-OxO8JJMAKZlNComC9wxoHU/view?usp=sharing" class="btn-s" target="_blank">Download Resume</a>
+        <a href="https://drive.google.com/file/d/1UpEL60xZyhPVtUvu_LywyWK6M5CPnaiS/view?usp=sharing" class="btn-s" target="_blank">Download Resume</a>
         <a href="https://calendly.com/indu-nivaloni/30min" target="_blank" rel="noopener" class="btn-g">Let's Talk</a>
       </div>
       <div class="hero-contact">
@@ -1364,8 +1417,7 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
     <div class="about-grid">
       <div>
         <div class="about-body reveal">
-          <p>My journey has moved from science to sales, from brand building to pharma consulting, and finally to building AI solutions for life sciences. With a B.Pharm foundation and 15+ years across industrial B2B, premium automotive, pharma consulting, and AI-powered SaaS, I bring a rare combination of commercial instinct, brand discipline, domain fluency, and product-to-market execution.</p>
-          <p>At phamax, I was part of the founding team behind Ariya — helping shape the platform from early concept to market-ready AI solution. I identified commercial and medical AI opportunities before the market fully matured, translated business needs into PRDs and product workflows, and built GTM narratives that connected product, sales, marketing, and customer adoption.</p>
+          <p>Enterprise SaaS and AI transformation leader with 15+ years of experience across strategic customer engagement, GTM execution, enterprise stakeholder management, and value realization in complex B2B environments. As a founding member of Ariya.ai, I have spent 8+ years working with pharma and life sciences clients to translate business priorities into AI-enabled transformation programs, solution roadmaps, adoption narratives, and measurable commercial outcomes.</p>
         </div>
 
         <!-- SECOND PULL-QUOTE -->
@@ -1497,9 +1549,11 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
             <div class="tl-org"><a href="https://www.phamax.ch/" target="_blank" rel="noopener" style="color:var(--ochre);text-decoration:none;border-bottom:1px solid var(--ochre-border);transition:border-color .2s" onmouseover="this.style.borderColor='var(--verm)'" onmouseout="this.style.borderColor='var(--ochre-border)'">phamax Group</a> / <a href="https://ariya.ai/" target="_blank" rel="noopener" style="color:var(--ochre);text-decoration:none;border-bottom:1px solid var(--ochre-border);transition:border-color .2s" onmouseover="this.style.borderColor='var(--verm)'" onmouseout="this.style.borderColor='var(--ochre-border)'">Ariya.ai</a></div>
             <span class="tl-tag">AI in Pharma · SaaS</span>
             <ul class="tl-bullets">
-              <li><strong>Founding team member</strong> — built Ariya from concept to market</li>
+              <li><strong>Built Ariya from earliest concept to market launch</strong></li>
               <li>Led end-to-end AI solutioning across Commercial and Medical Affairs — translating business needs into decision-making intelligence</li>
-              <li>Founded <strong>AI Exchange</strong> · led EMEA demand generation and enterprise pipeline growth</li>
+              <li>Designed AI use cases and solution frameworks, converting business problems into structured requirements and implementation roadmaps</li>
+              <li>Acted as a strategic advisor to enterprise pharma clients, shaping AI-led transformation initiatives across commercial and medical functions</li>
+              <li>Enabled sales teams with product positioning, tailored value propositions, customer insight, campaign-driven opportunities, and sales-ready messaging</li>
             </ul>
           </div>
         </div>
@@ -1576,66 +1630,6 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- WHAT I BUILD -->
-<section id="what-i-build" class="alt-bg">
-  <div class="container">
-    <div class="build-intro">
-      <div>
-        <div class="eyebrow reveal">Capabilities</div>
-        <div class="rule"></div>
-        <h2 class="section-h2 reveal">What I Build</h2>
-        <p class="lead reveal">The strategic and operational systems that take AI-led and B2B companies from ambition to market traction.</p>
-      </div>
-      <p class="build-note reveal">I don't just advise — I build. Every system below is something I've designed, shipped, and iterated in real engagements.</p>
-    </div>
-    <div class="build-grid">
-
-      <div class="bc reveal">
-        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M14 4v3M14 21v3M4 14h3M21 14h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M10 18l4-10 4 10-4-3-4 3z" fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
-        <div class="bc-tag">GTM &amp; Product Marketing</div>
-        <h3>AI GTM &amp; Product Marketing</h3>
-        <p>Market narratives, ICPs, launch plans, sales motions, and product positioning — from business requirement to market-ready story.</p>
-      </div>
-
-      <div class="bc reveal rd1">
-        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 11h22" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="8.5" r=".7" fill="currentColor"/><path d="M8 17l3-3 3 2 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="bc-tag">Sales</div>
-        <h3>Sales Enablement Engines</h3>
-        <p>Pitch decks, one-pagers, discovery guides, and battle cards — content that helps salespeople close.</p>
-      </div>
-
-      <div class="bc reveal rd2">
-        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M4 7h20M4 14h20M4 21h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="7" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="14" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/><circle cx="14" cy="21" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <div class="bc-tag">Agentic AI · Scoping</div>
-        <h3>AI Product Scoping &amp; Execution</h3>
-        <p>End-to-end with tech teams: PRD writing, use case definition, agentic workflows in Claude Projects and n8n, pilot design, and GTM launch.</p>
-      </div>
-
-      <div class="bc reveal">
-        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="22" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="21" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="22" cy="21" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 8l4 4M20 8l-4 4M8 20l4-4M20 20l-4-4" stroke="currentColor" stroke-width="1.4"/></svg></div>
-        <div class="bc-tag">Intelligence</div>
-        <h3>CRM &amp; Customer Intelligence</h3>
-        <p>Connected pipelines across Salesforce, Veeva, and Pipedrive — enriched with Apollo, activated through ActiveCampaign.</p>
-      </div>
-
-      <div class="bc reveal rd1">
-        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M14 3l3 6 6 1-4 5 1 7-6-3-6 3 1-7-4-5 6-1 3-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-        <div class="bc-tag">Brand</div>
-        <h3>Thought Leadership Platforms</h3>
-        <p>AI Exchange is the proof — built from zero, led by a pharma marketer, for pharma marketers.</p>
-      </div>
-
-      <div class="bc reveal rd2">
-        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M17 17l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 12h6M9 9h6M9 15h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
-        <div class="bc-tag">AEO &amp; SEO</div>
-        <h3>AEO &amp; Content Optimisation</h3>
-        <p>Answer Engine Optimisation with SEMrush and Google Search Console — schema design and search visibility.</p>
-      </div>
-
-    </div></div>
   </div>
 </section>
 
@@ -1947,6 +1941,45 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
   </div>
 </section>
 
+<!-- FRAMEWORKS -->
+<section id="frameworks" class="alt-bg fw-compact">
+  <div class="container">
+    <div class="eyebrow reveal">AI Frameworks</div>
+    <div class="rule"></div>
+    <div class="fw-strip reveal">
+      <div class="fw-strip-num">20<span>+</span></div>
+      <div class="fw-strip-body">
+        <h2 class="fw-strip-h">AI frameworks and agentic workflows — shipped, not just designed.</h2>
+        <p class="fw-strip-p">
+          <strong>Strategic systems:</strong> ICP Builder · Value Proposition · Positioning · GTM Launch · Sales Enablement · Thought Leadership Engine.<br>
+          <strong>Agentic workflows:</strong> AI content creation · competitive intelligence · webinar-to-content repurposing · rep-triggered outreach · proposal narrative generation.
+        </p>
+        <p class="fw-strip-note">Custom agents and full framework library shown during engagement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF GRID -->
+<section id="proof-grid" class="alt-bg">
+  <div class="container">
+    <div class="eyebrow reveal">Past Work Credentials</div>
+    <div class="rule"></div>
+    <h2 class="section-h2 reveal">Strategic Work Portfolio</h2>
+    <p class="lead reveal">A curated portfolio of strategic, GTM, sales enablement, creative, and business storytelling work. Some materials are blinded to protect client confidentiality — the thinking, systems, and execution are fully visible.</p>
+    <div class="proof-cards">
+      <div class="pc reveal"><div class="pc-num">01 · Platform</div><div class="pc-icon platform"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M3 12h18M12 3a13 13 0 010 18M12 3a13 13 0 000 18" stroke-width="1.5"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg></div><h3>AI Platform Website &amp; Product Storytelling</h3><p>Public-facing AI pharma platform — website narrative, solution positioning, product storytelling, and value communication for Ariya.ai.</p><a href="https://ariya.ai/" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal rd1"><div class="pc-num">02 · Strategy</div><div class="pc-icon strategy"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Strategic Documents</h3><p>GTM thinking, market narrative, ICP frameworks, positioning, launch planning, AI use-case strategy, and commercial intelligence documents.</p><a href="https://indubehera.github.io/work-portfolio/strategic-documents.html" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal rd2"><div class="pc-num">03 · Presentations</div><div class="pc-icon presentation"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="13" rx="1" stroke-width="1.5"/><path d="M7 13l3-3 2 2 4-5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21h6M12 17v4" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Executive Presentations</h3><p>Leadership storytelling, AI product communication, commercial narratives, webinar decks, and stakeholder-ready communication.</p><a href="https://indubehera.github.io/work-portfolio/presentations.html" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal"><div class="pc-num">04 · Business Narrative</div><div class="pc-icon investor"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 17l5-5 4 4 8-8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg></div><h3>Investor &amp; Business Narrative Materials</h3><p>Market opportunity framing, business storytelling, growth narrative, differentiation positioning, and executive-level value communication.</p><a href="https://indubehera.github.io/work-portfolio/Investor-pitch.html" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal rd1"><div class="pc-num">05 · Application Proposals</div><div class="pc-icon landing"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke-width="1.5"/><path d="M3 8h18" stroke-width="1.5"/><circle cx="6" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="8" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="10" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="14" cy="14" r="3" stroke-width="1.5"/><path d="M14 14l4 4" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Application Proposals</h3><p>Live application simulations and proposal demos — built to show concepts in action, not just describe them. From conversion-focused proposal narratives to working tool prototypes.</p><a href="https://kolens-plum.vercel.app/" target="_blank" rel="noopener" class="pc-lnk">View Live Demo →</a></div>
+      <div class="pc reveal rd2"><div class="pc-num">06 · Sales Enablement</div><div class="pc-icon sales"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>GTM &amp; Business Development Enablers</h3><p>Pitch decks, one-pagers, objection-handling frameworks, discovery guides, and buyer-facing assets for enterprise deals.</p><a href="https://drive.google.com/drive/folders/1OZuJyZXduMUpKEXhye1v5cu3ShA_shRu?usp=sharing" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal"><div class="pc-num">07 · Creative</div><div class="pc-icon creative"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a9 9 0 109 9c0-1-1-2-2-2h-2a2 2 0 010-4h1a3 3 0 003-3 6 6 0 00-9 0z" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="11" cy="7" r="1" fill="currentColor" stroke="none"/><circle cx="14" cy="7" r="1" fill="currentColor" stroke="none"/></svg></div><h3>Creative Campaign Assets</h3><p>LinkedIn creatives, campaign visuals, event backgrounds, brand assets, and visual storytelling across B2B SaaS, pharma, and automotive.</p><a href="https://drive.google.com/drive/folders/1RkY4dwNRO6CRkjdn0MI9zdfGvk7kVuda?usp=sharing" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+      <div class="pc reveal rd1"><div class="pc-num">08 · Case Studies</div><div class="pc-icon casestudy"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7a1 1 0 011-1h5l2 2h9a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7z" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 13l2 2 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Case Study Library</h3><p>Problem-solution-impact storytelling, business outcomes, strategic execution proof, and applied marketing results.</p><a href="https://drive.google.com/drive/folders/1mZ5R5Cqcsk_MTWImU_lDhHm4bZuAJIbq?usp=drive_link" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+    </div>
+  </div>
+</section>
+
 <!-- WHAT I'VE SHIPPED ACROSS 15 YEARS (renamed from Before AI) -->
 <section id="before-ai" class="before-ai-bg">
   <div class="container">
@@ -2169,165 +2202,63 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
   </div>
 </section>
 
-<!-- PROOF GRID -->
-<section id="proof-grid" class="alt-bg">
+<!-- WHAT I BUILD -->
+<section id="what-i-build" class="alt-bg">
   <div class="container">
-    <div class="eyebrow reveal">Past Work Credentials</div>
-    <div class="rule"></div>
-    <h2 class="section-h2 reveal">Strategic Work Portfolio</h2>
-    <p class="lead reveal">A curated portfolio of strategic, GTM, sales enablement, creative, and business storytelling work. Some materials are blinded to protect client confidentiality — the thinking, systems, and execution are fully visible.</p>
-    <div class="proof-cards">
-      <div class="pc reveal"><div class="pc-num">01 · Platform</div><div class="pc-icon platform"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><path d="M3 12h18M12 3a13 13 0 010 18M12 3a13 13 0 000 18" stroke-width="1.5"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg></div><h3>AI Platform Website &amp; Product Storytelling</h3><p>Public-facing AI pharma platform — website narrative, solution positioning, product storytelling, and value communication for Ariya.ai.</p><a href="https://ariya.ai/" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal rd1"><div class="pc-num">02 · Strategy</div><div class="pc-icon strategy"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Strategic Documents</h3><p>GTM thinking, market narrative, ICP frameworks, positioning, launch planning, AI use-case strategy, and commercial intelligence documents.</p><a href="https://indubehera.github.io/work-portfolio/strategic-documents.html" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal rd2"><div class="pc-num">03 · Presentations</div><div class="pc-icon presentation"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="13" rx="1" stroke-width="1.5"/><path d="M7 13l3-3 2 2 4-5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21h6M12 17v4" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Executive Presentations</h3><p>Leadership storytelling, AI product communication, commercial narratives, webinar decks, and stakeholder-ready communication.</p><a href="https://indubehera.github.io/work-portfolio/presentations.html" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal"><div class="pc-num">04 · Business Narrative</div><div class="pc-icon investor"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 17l5-5 4 4 8-8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg></div><h3>Investor &amp; Business Narrative Materials</h3><p>Market opportunity framing, business storytelling, growth narrative, differentiation positioning, and executive-level value communication.</p><a href="https://indubehera.github.io/work-portfolio/Investor-pitch.html" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal rd1"><div class="pc-num">05 · Application Proposals</div><div class="pc-icon landing"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke-width="1.5"/><path d="M3 8h18" stroke-width="1.5"/><circle cx="6" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="8" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="10" cy="6" r=".5" fill="currentColor" stroke="none"/><circle cx="14" cy="14" r="3" stroke-width="1.5"/><path d="M14 14l4 4" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Application Proposals</h3><p>Live application simulations and proposal demos — built to show concepts in action, not just describe them. From conversion-focused proposal narratives to working tool prototypes.</p><a href="https://kolens-plum.vercel.app/" target="_blank" rel="noopener" class="pc-lnk">View Live Demo →</a></div>
-      <div class="pc reveal rd2"><div class="pc-num">06 · Sales Enablement</div><div class="pc-icon sales"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>GTM &amp; Business Development Enablers</h3><p>Pitch decks, one-pagers, objection-handling frameworks, discovery guides, and buyer-facing assets for enterprise deals.</p><a href="https://drive.google.com/drive/folders/1OZuJyZXduMUpKEXhye1v5cu3ShA_shRu?usp=sharing" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal"><div class="pc-num">07 · Creative</div><div class="pc-icon creative"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a9 9 0 109 9c0-1-1-2-2-2h-2a2 2 0 010-4h1a3 3 0 003-3 6 6 0 00-9 0z" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="11" cy="7" r="1" fill="currentColor" stroke="none"/><circle cx="14" cy="7" r="1" fill="currentColor" stroke="none"/></svg></div><h3>Creative Campaign Assets</h3><p>LinkedIn creatives, campaign visuals, event backgrounds, brand assets, and visual storytelling across B2B SaaS, pharma, and automotive.</p><a href="https://drive.google.com/drive/folders/1RkY4dwNRO6CRkjdn0MI9zdfGvk7kVuda?usp=sharing" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
-      <div class="pc reveal rd1"><div class="pc-num">08 · Case Studies</div><div class="pc-icon casestudy"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7a1 1 0 011-1h5l2 2h9a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7z" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 13l2 2 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Case Study Library</h3><p>Problem-solution-impact storytelling, business outcomes, strategic execution proof, and applied marketing results.</p><a href="https://drive.google.com/drive/folders/1mZ5R5Cqcsk_MTWImU_lDhHm4bZuAJIbq?usp=drive_link" target="_blank" rel="noopener" class="pc-lnk">Explore →</a></div>
+    <div class="build-intro">
+      <div>
+        <div class="eyebrow reveal">Capabilities</div>
+        <div class="rule"></div>
+        <h2 class="section-h2 reveal">What I Build</h2>
+        <p class="lead reveal">The strategic and operational systems that take AI-led and B2B companies from ambition to market traction.</p>
+      </div>
+      <p class="build-note reveal">I don't just advise — I build. Every system below is something I've designed, shipped, and iterated in real engagements.</p>
     </div>
-  </div>
-</section>
+    <div class="build-grid">
 
-<!-- CASE STUDIES -->
-<section id="case-studies">
-  <div class="container">
-    <div class="eyebrow reveal">Selected Case Studies</div>
-    <div class="rule"></div>
-    <h2 class="section-h2 reveal">Work That Moved the Needle</h2>
-    <p class="lead reveal">Three real engagements. Real outcomes. Click any case to expand.</p>
-
-    <div class="cs-stack">
-
-      <!-- CS 01 -->
-      <div class="cs-card reveal open">
-        <div class="cs-hd" onclick="toggleCS(this)">
-          <div class="cs-hd-l">
-            <div class="cs-num">Case Study 01 · Medical Affairs · AI SaaS · EMEA</div>
-            <h3>300K CHF in revenue from a 35% lead lift — built from scratch</h3>
-            <div class="cs-stats">
-              <div class="cs-stat"><span class="cs-stat-n">35%</span><span class="cs-stat-l">Lead Increase</span></div>
-              <div class="cs-stat"><span class="cs-stat-n">22%</span><span class="cs-stat-l">MQL→SQL</span></div>
-              <div class="cs-stat"><span class="cs-stat-n">15%</span><span class="cs-stat-l">EMEA Growth</span></div>
-              <div class="cs-stat ribbon"><span class="cs-stat-n">300K</span><span class="cs-stat-l">CHF Revenue</span></div>
-            </div>
-          </div>
-          <div class="cs-toggle">+</div>
-        </div>
-        <div class="cs-bd">
-          <div class="cs-cols">
-            <div class="cs-col">
-              <h4>The Challenge</h4>
-              <p>Medical Affairs leaders needed AI-enabled insights from field notes, CRM, advisory boards, and competitor signals. The product worked. The market narrative didn't exist yet.</p>
-            </div>
-            <div class="cs-col">
-              <h4>The Strategy</h4>
-              <p>Develop the ICP from scratch. Build a complete GTM system aligned to how medical affairs teams evaluate and buy AI.</p>
-            </div>
-            <div class="cs-col">
-              <h4>What I Executed</h4>
-              <ul>
-                <li>ICP development and outreach plan for Medical Affairs</li>
-                <li>Multi-channel demand gen across EMEA and EU</li>
-                <li>Sales decks, one-pagers, and deal-support content</li>
-                <li>CRM-led lead gen with ZoomInfo, Apollo, HubSpot</li>
-                <li>AI Exchange webinar themes</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="bc reveal">
+        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M14 4v3M14 21v3M4 14h3M21 14h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M10 18l4-10 4 10-4-3-4 3z" fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+        <div class="bc-tag">GTM &amp; Product Marketing</div>
+        <h3>AI GTM &amp; Product Marketing</h3>
+        <p>Market narratives, ICPs, launch plans, sales motions, and product positioning — from business requirement to market-ready story.</p>
       </div>
 
-      <!-- CS 02 -->
-      <div class="cs-card reveal">
-        <div class="cs-hd" onclick="toggleCS(this)">
-          <div class="cs-hd-l">
-            <div class="cs-num">Case Study 02 · Thought Leadership · Pharma AI</div>
-            <h3>Founded the first dedicated AI forum for pharma marketing practitioners</h3>
-            <div class="cs-stats">
-              <div class="cs-stat ribbon"><span class="cs-stat-n">AI Exchange</span><span class="cs-stat-l">Built from zero</span></div>
-              <div class="cs-stat"><span class="cs-stat-n">Category</span><span class="cs-stat-l">Authority Built</span></div>
-              <div class="cs-stat"><span class="cs-stat-n">Senior</span><span class="cs-stat-l">Pharma Audience</span></div>
-            </div>
-          </div>
-          <div class="cs-toggle">+</div>
-        </div>
-        <div class="cs-bd">
-          <div class="cs-cols">
-            <div class="cs-col">
-              <h4>The Challenge</h4>
-              <p>Pharma marketing leaders were hearing about AI from every direction — but no pharma-specific space existed. The conversation was dominated by generalist tech voices.</p>
-            </div>
-            <div class="cs-col">
-              <h4>The Strategy</h4>
-              <p>Create the forum that didn't exist. Build AI Exchange as a community designed specifically for pharma marketing leaders.</p>
-            </div>
-            <div class="cs-col">
-              <h4>What I Executed</h4>
-              <ul>
-                <li>Platform concept, positioning, and naming</li>
-                <li>Webinar themes from real pharma marketer questions</li>
-                <li>Speaker strategy and topic planning</li>
-                <li>Executive roundtable format design</li>
-                <li>Community-building and brand authority</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="bc reveal rd1">
+        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 11h22" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="8.5" r=".7" fill="currentColor"/><path d="M8 17l3-3 3 2 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="bc-tag">Sales</div>
+        <h3>Sales Enablement Engines</h3>
+        <p>Pitch decks, one-pagers, discovery guides, and battle cards — content that helps salespeople close.</p>
       </div>
 
-      <!-- CS 03 -->
-      <div class="cs-card reveal">
-        <div class="cs-hd" onclick="toggleCS(this)">
-          <div class="cs-hd-l">
-            <div class="cs-num">Case Study 03 · Agentic AI · Claude Projects · Personal IP</div>
-            <h3>Built 3 production AI agents to eliminate my own repetitive work</h3>
-            <div class="cs-stats">
-              <div class="cs-stat ribbon"><span class="cs-stat-n">Bob</span><span class="cs-stat-l">Competitor Scraper</span></div>
-              <div class="cs-stat"><span class="cs-stat-n">LinkedIn</span><span class="cs-stat-l">Builder Agent</span></div>
-              <div class="cs-stat"><span class="cs-stat-n">VP</span><span class="cs-stat-l">Agent · ICP-trained</span></div>
-            </div>
-          </div>
-          <div class="cs-toggle">+</div>
-        </div>
-        <div class="cs-bd">
-          <div class="cs-cols">
-            <div class="cs-col">
-              <h4>The Challenge</h4>
-              <p>Repetitive tasks were consuming time that should go to strategic work — competitor monitoring, content creation, outreach personalisation. I built agents to free up the work that actually requires a senior marketing mind.</p>
-            </div>
-            <div class="cs-col">
-              <h4>Bob the Builder</h4>
-              <p>Scraper agent that monitors competitor blogs daily, generates structured blog posts with FAQ and How-To schema — AEO-ready, published without a human bottleneck.</p>
-            </div>
-            <div class="cs-col">
-              <h4>LinkedIn Builder &amp; VP Agent</h4>
-              <p><strong>LinkedIn Builder</strong> — Claude workflow trained on my writing style; maintains authentic voice at scale. <strong>VP Agent</strong> — Claude Projects with ICP-specific skills; generates personalised content per buyer segment.</p>
-            </div>
-          </div>
-        </div>
+      <div class="bc reveal rd2">
+        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M4 7h20M4 14h20M4 21h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="7" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="14" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/><circle cx="14" cy="21" r="2" fill="white" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <div class="bc-tag">Agentic AI · Scoping</div>
+        <h3>AI Product Scoping &amp; Execution</h3>
+        <p>End-to-end with tech teams: PRD writing, use case definition, agentic workflows in Claude Projects and n8n, pilot design, and GTM launch.</p>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- FRAMEWORKS -->
-<section id="frameworks" class="alt-bg fw-compact">
-  <div class="container">
-    <div class="eyebrow reveal">Frameworks &amp; AI Agents</div>
-    <div class="rule"></div>
-    <div class="fw-strip reveal">
-      <div class="fw-strip-num">20<span>+</span></div>
-      <div class="fw-strip-body">
-        <h2 class="fw-strip-h">Frameworks and agentic workflows — shipped, not just designed.</h2>
-        <p class="fw-strip-p">
-          <strong>Strategic systems:</strong> ICP Builder · Value Proposition · Positioning · GTM Launch · Sales Enablement · Thought Leadership Engine.<br>
-          <strong>Agentic workflows:</strong> AI content creation · competitive intelligence · webinar-to-content repurposing · rep-triggered outreach · proposal narrative generation.
-        </p>
-        <p class="fw-strip-note">Custom agents and full framework library shown during engagement.</p>
+      <div class="bc reveal">
+        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="22" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="21" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="22" cy="21" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 8l4 4M20 8l-4 4M8 20l4-4M20 20l-4-4" stroke="currentColor" stroke-width="1.4"/></svg></div>
+        <div class="bc-tag">Intelligence</div>
+        <h3>CRM &amp; Customer Intelligence</h3>
+        <p>Connected pipelines across Salesforce, Veeva, and Pipedrive — enriched with Apollo, activated through ActiveCampaign.</p>
       </div>
-    </div>
+
+      <div class="bc reveal rd1">
+        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M14 3l3 6 6 1-4 5 1 7-6-3-6 3 1-7-4-5 6-1 3-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div class="bc-tag">Brand</div>
+        <h3>Thought Leadership Platforms</h3>
+        <p>AI Exchange is the proof — built from zero, led by a pharma marketer, for pharma marketers.</p>
+      </div>
+
+      <div class="bc reveal rd2">
+        <div class="bc-icon"><svg viewBox="0 0 28 28" fill="none"><circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M17 17l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 12h6M9 9h6M9 15h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div class="bc-tag">AEO &amp; SEO</div>
+        <h3>AEO &amp; Content Optimisation</h3>
+        <p>Answer Engine Optimisation with SEMrush and Google Search Console — schema design and search visibility.</p>
+      </div>
+
+    </div></div>
   </div>
 </section>
 
@@ -2420,24 +2351,19 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
   </div>
 </section>
 
-<!-- CONSULTING -->
+<!-- CONSULTING STRIP -->
 <section id="consulting" class="alt-bg">
   <div class="container">
-    <div class="consult-intro">
-      <div>
-        <div class="eyebrow reveal">Fractional AI Marketing Support</div>
-        <div class="rule"></div>
-        <h2 class="section-h2 reveal">Strategic &amp; Hands-On AI Marketing Support</h2>
-        <p class="lead reveal">For founders, growth teams, and AI-led companies that need senior marketing direction and hands-on execution — without a full-time hire. Focused 4–8 week engagements designed to ship real output.</p>
+    <div class="consulting-strip reveal">
+      <div class="cs-strip-text">
+        <div class="eyebrow" style="color:var(--ochre);margin-bottom:.6rem">Engagement Options</div>
+        <h2 class="cs-strip-h">Available for full-time leadership roles and selective fractional engagements.</h2>
+        <p class="cs-strip-p">From founding-team marketing and AI GTM leadership to fractional CMO and AI marketing advisory — I work where strategy, AI execution, and commercial outcomes need to come together.</p>
       </div>
-      <div class="consult-note reveal">The best engagements I take on are with teams that have a real AI ambition but no clear marketing path to it yet. I come in as a <strong>thinking partner who also ships</strong> — whether you need a GTM motion built from scratch, a content engine that runs without you, or a sales team that can finally explain what the product does.</div>
-    </div>
-    <div class="offers">
-      <div class="offer top reveal"><span class="offer-badge">Most Requested</span><div class="offer-n">01</div><h3>AI GTM Sprint</h3><p>Positioning, ICP, messaging architecture, launch narrative, campaign plan, and GTM assets. For AI-led and SaaS companies building their first market motion or relaunching.</p><div class="offer-scope">Typical scope: 4–6 weeks</div></div>
-      <div class="offer reveal rd1"><div class="offer-n">02</div><h3>AI Content Operating System</h3><p>A full prompt-led content engine — workflows for blogs, LinkedIn, email campaigns, sales content, and campaign assets. Built for your team to run independently at scale.</p><div class="offer-scope">Typical scope: 3–5 weeks</div></div>
-      <div class="offer reveal rd2"><div class="offer-n">03</div><h3>Sales Enablement AI Sprint</h3><p>Pitch decks, one-pagers, discovery guides, objection-handling frameworks, and deal-support narratives. The assets sales teams actually use to close enterprise deals.</p><div class="offer-scope">Typical scope: 3–4 weeks</div></div>
-      <div class="offer reveal"><div class="offer-n">04</div><h3>CRM &amp; Intelligence Workflow Audit</h3><p>Segmentation logic, CRM insight workflows, lead scoring design, and customer engagement architecture — connecting Salesforce, Veeva, Apollo, and ActiveCampaign into one intelligence layer.</p><div class="offer-scope">Typical scope: 2–4 weeks</div></div>
-      <div class="offer reveal rd1"><div class="offer-n">05</div><h3>Thought Leadership Engine</h3><p>Webinar themes, executive narratives, content calendar, community strategy, and follow-up campaigns that build category authority and generate qualified pipeline from trust.</p><div class="offer-scope">Typical scope: 4–6 weeks</div></div>
+      <div class="cs-strip-cta">
+        <a href="https://calendly.com/indu-nivaloni/30min" target="_blank" rel="noopener" class="btn-cta-large">Let's Talk →</a>
+        <p class="cs-strip-note">30-min discovery call</p>
+      </div>
     </div>
   </div>
 </section>
@@ -2452,7 +2378,7 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
       <p class="lead">I work with teams that need more than a marketing plan — they need a clear position, an intelligent content engine, a sales team that can close, and a GTM system that connects strategy directly to revenue. If that's where you are, let's talk.</p>
       <div class="cta-btns">
         <a href="https://calendly.com/indu-nivaloni/30min" target="_blank" rel="noopener" class="btn-cta-p">Start a Conversation</a>
-        <a href="https://drive.google.com/file/d/1Pjfhl1CDH-OxO8JJMAKZlNComC9wxoHU/view?usp=sharing" class="btn-cta-s" target="_blank">Download Resume</a>
+        <a href="https://drive.google.com/file/d/1UpEL60xZyhPVtUvu_LywyWK6M5CPnaiS/view?usp=sharing" class="btn-cta-s" target="_blank">Download Resume</a>
         <a href="https://www.linkedin.com/in/indu-behera/" class="btn-cta-g" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
       </div>
       <div class="cta-contact">
@@ -2471,7 +2397,7 @@ footer{background:var(--ink-mid);border-top:1px solid rgba(247,244,239,.06);padd
     <a href="mailto:indu.nivaloni@gmail.com">Email</a>
     <a href="https://www.linkedin.com/in/indu-behera/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://ariya.ai/" target="_blank" rel="noopener">Ariya.ai</a>
-    <a href="https://drive.google.com/file/d/1Pjfhl1CDH-OxO8JJMAKZlNComC9wxoHU/view?usp=sharing" target="_blank">Resume</a>
+    <a href="https://drive.google.com/file/d/1UpEL60xZyhPVtUvu_LywyWK6M5CPnaiS/view?usp=sharing" target="_blank">Resume</a>
   </div>
 </footer>
 
